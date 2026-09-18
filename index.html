@@ -48,7 +48,7 @@
   <style>
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: #0D0D0D;
+      background-color: #111827;
       color: #FFFFFF;
       -webkit-font-smoothing: antialiased;
     }
@@ -68,39 +68,39 @@
   </style>
 </head>
 
-<body class="bg-gym-black text-white min-h-screen">
+<body class="bg-white text-neutral-900 min-h-screen">
 
   <!-- ================= 1. GYMFIT X TOP NAVBAR ================= -->
-  <header class="bg-gym-black/95 backdrop-blur-md border-b border-gym-border/80 sticky top-0 z-50">
+  <header class="bg-white/95 backdrop-blur-md border-b border-neutral-200 sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       
       <!-- Brand Logo Mark with Dumbbell / Fist glyph -->
       <a href="#" class="flex items-center gap-3 group">
-        <div class="flex items-center gap-1.5 font-headline font-black text-xl tracking-wider text-white">
-          <i data-lucide="dumbbell" class="w-5 h-5 text-white stroke-[2.5]"></i>
+        <div class="flex items-center gap-1.5 font-headline font-black text-xl tracking-wider text-black">
+          <img src="favicon.png" class="w-7 h-7 object-contain inline-block mr-1.5" />
           <span>BACKYARD</span>
-          <span class="text-xs bg-white text-black px-1.5 py-0.5 rounded font-bold ml-1">LAB</span>
+          <span class="text-xs bg-black text-white px-1.5 py-0.5 rounded font-bold ml-1">LAB</span>
         </div>
       </a>
 
       <!-- Center Links -->
-      <nav class="hidden md:flex items-center space-x-9 font-headline text-[13px] font-bold uppercase tracking-wider text-neutral-300">
-        <a href="#about" class="hover:text-white transition-colors">About</a>
-        <a href="#gauntlet" class="hover:text-white transition-colors">10 Stations</a>
-        <a href="#classes" class="hover:text-white transition-colors">Classes</a>
-        <a href="#timetable" class="hover:text-white transition-colors">Timetable</a>
-        <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
-        <a href="#pro-shop" class="hover:text-white transition-colors">Shop</a>
+      <nav class="hidden md:flex items-center space-x-9 font-headline text-[13px] font-bold uppercase tracking-wider text-neutral-600">
+        <a href="#about" class="hover:text-black transition-colors">About</a>
+        <a href="#gauntlet" class="hover:text-black transition-colors">10 Stations</a>
+        <a href="#classes" class="hover:text-black transition-colors">Classes</a>
+        <a href="#timetable" class="hover:text-black transition-colors">Timetable</a>
+        <a href="#pricing" class="hover:text-black transition-colors">Pricing</a>
+        <a href="#pro-shop" class="hover:text-black transition-colors">Shop</a>
       </nav>
 
       <!-- Cart Icon with Red Badge -->
       <div class="flex items-center gap-5">
-        <button onclick="toggleCartDrawer()" class="relative text-white hover:text-neutral-300 transition-colors p-1" title="Shopping Cart">
+        <button onclick="toggleCartDrawer()" class="relative text-neutral-700 hover:text-black transition-colors p-1" title="Shopping Cart">
           <i data-lucide="shopping-bag" class="w-5 h-5"></i>
           <span id="cartBadge" class="absolute -top-1 -right-2 bg-gym-accent text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center">1</span>
         </button>
 
-        <button onclick="openBookingModal('Trial Session (12-Person Cap)', 'RM 10', 'Lead Kru Adli & Team', 'Upcoming Available Slot')" class="hidden sm:inline-block bg-white hover:bg-neutral-200 text-black font-headline font-bold text-xs uppercase tracking-wider px-5 py-2.5 transition-colors">
+        <button onclick="openBookingModal('Trial Session (12-Person Cap)', 'RM 10', 'Lead Kru Adli & Team', 'Upcoming Available Slot')" class="hidden sm:inline-block bg-black hover:bg-neutral-800 text-white font-headline font-bold text-xs uppercase tracking-wider px-5 py-2.5 transition-colors shadow-sm">
           Book Trial (RM 10)
         </button>
       </div>
@@ -114,28 +114,28 @@
     
     <!-- Dark Atmospheric Fighter Workout Photo Background -->
     <div class="absolute inset-0 z-0">
-      <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=2200&q=80" alt="High Impact Muay Thai Gym" class="w-full h-full object-cover filter contrast-125 brightness-50" />
-      <div class="absolute inset-0 bg-gradient-to-t from-gym-black via-black/40 to-black/70"></div>
+      <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=2200&q=80" alt="High Impact Muay Thai Gym" class="w-full h-full object-cover filter contrast-125 opacity-20" />
+      <div class="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-white/30"></div>
     </div>
 
     <!-- Centered Hero Typography (Exact GYMFIT X structure) -->
     <div class="relative z-10 max-w-4xl mx-auto py-20 space-y-6">
       
-      <h1 class="font-headline font-black text-5xl sm:text-7xl lg:text-8xl tracking-tight uppercase text-white leading-[1.02]">
+      <h1 class="font-headline font-black text-5xl sm:text-7xl lg:text-8xl tracking-tight uppercase text-black leading-[1.02]">
         THE GYM FOR HIGH<br>IMPACT ATHLETES
       </h1>
 
-      <p class="text-xs sm:text-sm font-medium text-neutral-300 max-w-xl mx-auto leading-relaxed">
+      <p class="text-xs sm:text-sm font-medium text-neutral-600 max-w-xl mx-auto leading-relaxed">
         From fundamental fight mechanics to anaerobic conditioning. 10-station combat circuits, dedicated 1-on-1 coach pad rounds, and maximum 12 people per session.
       </p>
 
       <!-- Dual Rectangular Buttons (Exact GYMFIT X Style: Solid White + Hollow Outlined) -->
       <div class="flex flex-wrap items-center justify-center gap-4 pt-4 font-headline text-xs font-extrabold uppercase tracking-wider">
-        <button onclick="openBookingModal('Trial Session (12-Person Cap)', 'RM 10', 'Lead Kru Adli & Team', 'Upcoming Available Slot')" class="bg-white hover:bg-neutral-200 text-black px-9 py-4 transition-colors shadow-lg">
+        <button onclick="openBookingModal('Trial Session (12-Person Cap)', 'RM 10', 'Lead Kru Adli & Team', 'Upcoming Available Slot')" class="bg-black hover:bg-neutral-800 text-white px-9 py-4 transition-colors shadow-lg">
           Subscribe Now
         </button>
 
-        <a href="#classes" class="bg-transparent hover:bg-white/10 text-white border-2 border-white px-9 py-3.5 transition-colors">
+        <a href="#classes" class="bg-transparent hover:bg-black/5 text-black border-2 border-black px-9 py-3.5 transition-colors">
           Browse Classes
         </a>
       </div>
@@ -148,50 +148,50 @@
   <!-- ================= 3. FLOATING INFO WIDGET (CONTACT / HOURS / LOCATION) ================= -->
   <!-- Overlaps the dark hero and the upcoming white section -->
   <section class="relative z-20 max-w-6xl mx-auto px-6 -mt-16 sm:-mt-20">
-    <div class="bg-gym-dark border border-gym-border p-8 sm:p-10 shadow-2xl grid grid-cols-1 md:grid-cols-3 gap-8 text-xs">
+    <div class="bg-white border border-neutral-200 p-8 sm:p-10 shadow-2xl grid grid-cols-1 md:grid-cols-3 gap-8 text-xs">
       
       <!-- Column 1: Contact -->
       <div class="flex items-start gap-4">
-        <div class="w-10 h-10 rounded border border-gym-border flex items-center justify-center text-white shrink-0">
+        <div class="w-10 h-10 rounded border border-neutral-200 bg-neutral-50 flex items-center justify-center text-black shrink-0">
           <i data-lucide="mail" class="w-5 h-5"></i>
         </div>
         <div class="space-y-1.5 font-headline">
-          <span class="text-xs font-extrabold uppercase tracking-wider text-white block">CONTACT</span>
-          <a href="mailto:info@thebackyardmy.com" class="text-neutral-400 hover:text-white underline block text-[11px]">INFO@THEBACKYARDMY.COM</a>
-          <a href="https://wa.me/60123456789" class="text-neutral-400 hover:text-white block text-[11px]">+60 12-345 6789 (WHATSAPP)</a>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-black block">CONTACT</span>
+          <a href="mailto:info@thebackyardmy.com" class="text-neutral-600 hover:text-black underline block text-[11px]">INFO@THEBACKYARDMY.COM</a>
+          <a href="https://wa.me/60123456789" class="text-neutral-600 hover:text-black block text-[11px]">+60 12-345 6789 (WHATSAPP)</a>
         </div>
       </div>
 
       <!-- Column 2: Open Hours -->
       <div class="flex items-start gap-4 border-t md:border-t-0 md:border-l border-gym-border pt-6 md:pt-0 md:pl-8">
-        <div class="w-10 h-10 rounded border border-gym-border flex items-center justify-center text-white shrink-0">
+        <div class="w-10 h-10 rounded border border-neutral-200 bg-neutral-50 flex items-center justify-center text-black shrink-0">
           <i data-lucide="clock" class="w-5 h-5"></i>
         </div>
         <div class="space-y-1 font-headline w-full">
-          <span class="text-xs font-extrabold uppercase tracking-wider text-white block mb-1">OPEN HOURS</span>
-          <div class="flex justify-between text-[11px] text-neutral-400">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-black block mb-1">OPEN HOURS</span>
+          <div class="flex justify-between text-[11px] text-neutral-600">
             <span>MONDAY - FRIDAY</span>
-            <span class="text-white">7:00AM - 9:30PM</span>
+            <span class="text-black font-bold">7:00AM - 9:30PM</span>
           </div>
-          <div class="flex justify-between text-[11px] text-neutral-400">
+          <div class="flex justify-between text-[11px] text-neutral-600">
             <span>SATURDAY</span>
-            <span class="text-white">8:30AM - 4:00PM</span>
+            <span class="text-black font-bold">8:30AM - 4:00PM</span>
           </div>
-          <div class="flex justify-between text-[11px] text-neutral-400">
+          <div class="flex justify-between text-[11px] text-neutral-600">
             <span>SUNDAY</span>
-            <span class="text-neutral-500">DEEP MAT CLEAN</span>
+            <span class="text-neutral-500 font-medium">DEEP MAT CLEAN</span>
           </div>
         </div>
       </div>
 
       <!-- Column 3: Location -->
       <div class="flex items-start gap-4 border-t md:border-t-0 md:border-l border-gym-border pt-6 md:pt-0 md:pl-8">
-        <div class="w-10 h-10 rounded border border-gym-border flex items-center justify-center text-white shrink-0">
+        <div class="w-10 h-10 rounded border border-neutral-200 bg-neutral-50 flex items-center justify-center text-black shrink-0">
           <i data-lucide="map-pin" class="w-5 h-5"></i>
         </div>
         <div class="space-y-1.5 font-headline">
-          <span class="text-xs font-extrabold uppercase tracking-wider text-white block">LOCATION</span>
-          <p class="text-neutral-400 leading-relaxed text-[11px]">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-black block">LOCATION</span>
+          <p class="text-neutral-600 leading-relaxed text-[11px]">
             LOT 14-B, INDUSTRIAL ALLEYWAY,<br>
             OFF JALAN MAAROF, BANGSAR,<br>
             59100 KUALA LUMPUR
@@ -255,7 +255,7 @@
 
 
   <!-- ================= 5. DISCOVER ALL OUR CLASSES (DARK BACKGROUND + WATERMARK + CAROUSEL ARROWS) ================= -->
-  <section id="classes" class="bg-gym-black pt-28 pb-32 px-6 border-t border-gym-border relative overflow-hidden">
+  <section id="classes" class="bg-neutral-50 pt-28 pb-32 px-6 border-t border-neutral-200 relative overflow-hidden">
     
     <!-- Background Watermark Text "CLASSES" -->
     <div class="absolute top-12 left-10 font-headline font-black text-7xl sm:text-9xl lg:text-[12rem] watermark-text-dark uppercase pointer-events-none select-none opacity-40">
@@ -267,17 +267,17 @@
       <!-- Section Header with Left/Right Carousel Controls (Exact GYMFIT X Layout) -->
       <div class="flex items-end justify-between border-b border-gym-border pb-8">
         <div>
-          <h2 class="font-headline font-black text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight uppercase">
+          <h2 class="font-headline font-black text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight uppercase">
             DISCOVER ALL OUR<br>CLASSES
           </h2>
         </div>
 
         <!-- Square Slider Control Buttons -->
         <div class="flex items-center gap-2">
-          <button onclick="slideClasses('prev')" class="w-12 h-12 bg-white text-black hover:bg-neutral-200 flex items-center justify-center transition-colors font-bold">
+          <button onclick="slideClasses('prev')" class="w-12 h-12 bg-black text-white hover:bg-neutral-800 flex items-center justify-center transition-colors font-bold shadow-sm">
             <i data-lucide="chevron-left" class="w-5 h-5"></i>
           </button>
-          <button onclick="slideClasses('next')" class="w-12 h-12 bg-white text-black hover:bg-neutral-200 flex items-center justify-center transition-colors font-bold">
+          <button onclick="slideClasses('next')" class="w-12 h-12 bg-black text-white hover:bg-neutral-800 flex items-center justify-center transition-colors font-bold shadow-sm">
             <i data-lucide="chevron-right" class="w-5 h-5"></i>
           </button>
         </div>
@@ -287,7 +287,7 @@
       <div id="classCarousel" class="grid grid-cols-1 md:grid-cols-3 gap-6">
         
         <!-- Class 1 -->
-        <div class="group relative overflow-hidden bg-gym-dark border border-gym-border shadow-xl">
+        <div class="group relative overflow-hidden bg-white border border-neutral-200 shadow-lg hover:shadow-xl transition-shadow">
           <div class="aspect-[3/4] overflow-hidden">
             <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=800&q=80" alt="Muay Thai Fundamentals" class="w-full h-full object-cover filter contrast-125 group-hover:scale-105 transition-transform duration-700" />
             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
@@ -306,7 +306,7 @@
         </div>
 
         <!-- Class 2 -->
-        <div class="group relative overflow-hidden bg-gym-dark border border-gym-border shadow-xl">
+        <div class="group relative overflow-hidden bg-white border border-neutral-200 shadow-lg hover:shadow-xl transition-shadow">
           <div class="aspect-[3/4] overflow-hidden">
             <img src="https://images.unsplash.com/photo-1517438476312-10d79c077509?auto=format&fit=crop&w=800&q=80" alt="Technical Boxing" class="w-full h-full object-cover filter contrast-125 group-hover:scale-105 transition-transform duration-700" />
             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
@@ -325,7 +325,7 @@
         </div>
 
         <!-- Class 3 -->
-        <div class="group relative overflow-hidden bg-gym-dark border border-gym-border shadow-xl">
+        <div class="group relative overflow-hidden bg-white border border-neutral-200 shadow-lg hover:shadow-xl transition-shadow">
           <div class="aspect-[3/4] overflow-hidden">
             <img src="https://images.unsplash.com/photo-1583473848882-f9a5bc7fd208?auto=format&fit=crop&w=800&q=80" alt="The Gauntlet Circuit" class="w-full h-full object-cover filter contrast-125 group-hover:scale-105 transition-transform duration-700" />
             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
@@ -351,32 +351,32 @@
 
 
   <!-- ================= 6. INTERACTIVE TIMETABLE & CLASS BOOKINGS ================= -->
-  <section id="timetable" class="bg-gym-dark py-24 px-6 border-t border-gym-border">
+  <section id="timetable" class="bg-white py-24 px-6 border-t border-neutral-200">
     <div class="max-w-7xl mx-auto space-y-10">
       
       <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-gym-border pb-6 gap-6">
         <div>
-          <span class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 font-bold">REAL-TIME MAT BOOKINGS</span>
-          <h3 class="font-headline font-black text-4xl uppercase text-white mt-1">Weekly Mat Timetable</h3>
+          <span class="text-[10px] font-mono uppercase tracking-widest text-neutral-600 font-bold">REAL-TIME MAT BOOKINGS</span>
+          <h3 class="font-headline font-black text-4xl uppercase text-black mt-1">Weekly Mat Timetable</h3>
         </div>
 
         <!-- Discipline Filter Pills -->
         <div class="flex flex-wrap gap-2 text-xs font-headline font-bold uppercase">
           <button onclick="filterClasses('all')" class="class-filter-btn px-4 py-2 bg-white text-black transition-all">All Disciplines</button>
-          <button onclick="filterClasses('muay-thai')" class="class-filter-btn px-4 py-2 bg-gym-surface text-neutral-400 hover:text-white border border-gym-border transition-all">Muay Thai</button>
-          <button onclick="filterClasses('boxing')" class="class-filter-btn px-4 py-2 bg-gym-surface text-neutral-400 hover:text-white border border-gym-border transition-all">Boxing</button>
-          <button onclick="filterClasses('sparring')" class="class-filter-btn px-4 py-2 bg-gym-surface text-neutral-400 hover:text-white border border-gym-border transition-all">Sparring</button>
+          <button onclick="filterClasses('muay-thai')" class="class-filter-btn px-4 py-2 bg-gym-surface text-neutral-600 hover:text-black border border-gym-border transition-all">Muay Thai</button>
+          <button onclick="filterClasses('boxing')" class="class-filter-btn px-4 py-2 bg-gym-surface text-neutral-600 hover:text-black border border-gym-border transition-all">Boxing</button>
+          <button onclick="filterClasses('sparring')" class="class-filter-btn px-4 py-2 bg-gym-surface text-neutral-600 hover:text-black border border-gym-border transition-all">Sparring</button>
         </div>
       </div>
 
       <!-- Day Navigation Tabs -->
       <div class="flex overflow-x-auto space-x-2 pb-2">
         <button onclick="switchDay('mon')" id="tab-mon" class="day-tab bg-white text-black font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Monday</button>
-        <button onclick="switchDay('tue')" id="tab-tue" class="day-tab bg-gym-surface text-neutral-400 hover:text-white border border-gym-border font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Tuesday</button>
-        <button onclick="switchDay('wed')" id="tab-wed" class="day-tab bg-gym-surface text-neutral-400 hover:text-white border border-gym-border font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Wednesday</button>
-        <button onclick="switchDay('thu')" id="tab-thu" class="day-tab bg-gym-surface text-neutral-400 hover:text-white border border-gym-border font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Thursday</button>
-        <button onclick="switchDay('fri')" id="tab-fri" class="day-tab bg-gym-surface text-neutral-400 hover:text-white border border-gym-border font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Friday</button>
-        <button onclick="switchDay('sat')" id="tab-sat" class="day-tab bg-gym-surface text-neutral-400 hover:text-white border border-gym-border font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Saturday (Smoker)</button>
+        <button onclick="switchDay('tue')" id="tab-tue" class="day-tab bg-gym-surface text-neutral-600 hover:text-black border border-gym-border font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Tuesday</button>
+        <button onclick="switchDay('wed')" id="tab-wed" class="day-tab bg-gym-surface text-neutral-600 hover:text-black border border-gym-border font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Wednesday</button>
+        <button onclick="switchDay('thu')" id="tab-thu" class="day-tab bg-gym-surface text-neutral-600 hover:text-black border border-gym-border font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Thursday</button>
+        <button onclick="switchDay('fri')" id="tab-fri" class="day-tab bg-gym-surface text-neutral-600 hover:text-black border border-gym-border font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Friday</button>
+        <button onclick="switchDay('sat')" id="tab-sat" class="day-tab bg-gym-surface text-neutral-600 hover:text-black border border-gym-border font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Saturday (Smoker)</button>
       </div>
 
       <div id="scheduleGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
@@ -386,7 +386,7 @@
 
 
   <!-- ================= 7. MEMBERSHIP & PRICING TIERS ================= -->
-  <section id="pricing" class="bg-white text-black py-28 px-6 relative overflow-hidden">
+  <section id="pricing" class="bg-neutral-50 text-black py-28 px-6 relative overflow-hidden border-t border-neutral-200">
     
     <div class="absolute top-10 right-10 font-headline font-black text-7xl sm:text-9xl watermark-text uppercase pointer-events-none select-none opacity-50">
       PRICING
@@ -408,7 +408,7 @@
         <!-- Tier 1 -->
         <div class="border-2 border-neutral-200 p-8 flex flex-col justify-between space-y-8 bg-white shadow-sm">
           <div>
-            <span class="text-xs uppercase text-neutral-400 font-bold tracking-wider">DROP-IN & CASUAL</span>
+            <span class="text-xs uppercase text-neutral-600 font-bold tracking-wider">DROP-IN & CASUAL</span>
             <h4 class="font-black text-2xl uppercase mt-1 text-black">Single Mat Pass</h4>
             <div class="my-6">
               <span class="font-black text-5xl text-black">RM 80</span>
@@ -440,11 +440,11 @@
             ★ MOST POPULAR VALUE
           </div>
           <div>
-            <span class="text-xs uppercase text-neutral-400 font-bold tracking-wider">FLEXIBLE REGULARS</span>
+            <span class="text-xs uppercase text-neutral-600 font-bold tracking-wider">FLEXIBLE REGULARS</span>
             <h4 class="font-black text-2xl uppercase mt-1 text-white">10-Class Striking Pass</h4>
             <div class="my-6">
               <span class="font-black text-5xl text-white">RM 650</span>
-              <span class="text-xs font-mono text-neutral-400 font-normal">/ pack (RM 65/class)</span>
+              <span class="text-xs font-mono text-neutral-600 font-normal">/ pack (RM 65/class)</span>
             </div>
             <ul class="space-y-3 text-xs text-neutral-200 border-t border-neutral-800 pt-6 font-sans">
               <li class="flex items-center gap-2.5">
@@ -473,7 +473,7 @@
         <!-- Tier 3 -->
         <div class="border-2 border-neutral-200 p-8 flex flex-col justify-between space-y-8 bg-white shadow-sm">
           <div>
-            <span class="text-xs uppercase text-neutral-400 font-bold tracking-wider">UNRESTRICTED ACCESS</span>
+            <span class="text-xs uppercase text-neutral-600 font-bold tracking-wider">UNRESTRICTED ACCESS</span>
             <h4 class="font-black text-2xl uppercase mt-1 text-black">Unlimited Monthly Lab</h4>
             <div class="my-6">
               <span class="font-black text-5xl text-black">RM 480</span>
@@ -506,14 +506,14 @@
 
 
   <!-- ================= 8. GYMFIT X FOOTER ================= -->
-  <footer class="bg-gym-black border-t border-gym-border py-14 px-6 text-xs text-neutral-400">
+  <footer class="bg-gym-black border-t border-gym-border py-14 px-6 text-xs text-neutral-600">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 font-headline uppercase tracking-wider">
-      <div class="flex items-center gap-2 text-white font-black text-lg">
-        <i data-lucide="dumbbell" class="w-5 h-5 text-white"></i>
+      <div class="flex items-center gap-2 text-black font-black text-lg">
+        <img src="favicon.png" class="w-6 h-6 object-contain inline-block" />
         <span>THE BACKYARD FIGHT LAB</span>
       </div>
 
-      <div class="flex items-center gap-6 font-mono text-[11px] text-neutral-400">
+      <div class="flex items-center gap-6 font-mono text-[11px] text-neutral-600">
         <a href="https://wa.me/60123456789" target="_blank" class="hover:text-white">WhatsApp</a>
         <a href="https://instagram.com" target="_blank" class="hover:text-white">Instagram</a>
         <a href="#about" class="hover:text-white">About</a>
@@ -534,46 +534,46 @@
     <div class="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity" onclick="closeBookingModal()"></div>
 
     <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-      <div class="pointer-events-auto w-screen max-w-md bg-gym-black border-l border-gym-border flex flex-col justify-between shadow-2xl">
+      <div class="pointer-events-auto w-screen max-w-md bg-white border-l border-neutral-200 flex flex-col justify-between shadow-2xl">
         
         <div class="p-6 border-b border-gym-border flex items-center justify-between">
-          <h3 class="font-headline font-black text-base uppercase tracking-wider text-white">Reserve Mat Spot</h3>
-          <button onclick="closeBookingModal()" class="text-neutral-400 hover:text-white p-1">
+          <h3 class="font-headline font-black text-base uppercase tracking-wider text-black">Reserve Mat Spot</h3>
+          <button onclick="closeBookingModal()" class="text-neutral-600 hover:text-black p-1">
             <i data-lucide="x" class="w-5 h-5"></i>
           </button>
         </div>
 
         <div class="p-6 space-y-5 overflow-y-auto flex-1 text-xs">
-          <div class="bg-gym-surface border border-gym-border p-4 space-y-1.5 font-headline">
+          <div class="bg-neutral-50 border border-neutral-200 p-4 space-y-1.5 font-headline">
             <div class="flex justify-between items-start">
-              <h4 id="drawerClassTitle" class="font-bold text-sm text-white">First Strike Trial Session</h4>
+              <h4 id="drawerClassTitle" class="font-bold text-sm text-black">First Strike Trial Session</h4>
               <span id="drawerClassPrice" class="font-mono text-xs font-bold bg-white text-black px-2.5 py-0.5">RM 10</span>
             </div>
-            <div id="drawerClassCoach" class="text-xs text-neutral-400 font-sans">Instructor: Head Kru Adli</div>
-            <div id="drawerClassTime" class="text-xs text-neutral-400 font-sans">Slot: Tonight 7:30 PM</div>
+            <div id="drawerClassCoach" class="text-xs text-neutral-600 font-sans">Instructor: Head Kru Adli</div>
+            <div id="drawerClassTime" class="text-xs text-neutral-600 font-sans">Slot: Tonight 7:30 PM</div>
             <div class="text-[11px] text-white font-mono pt-1">Strict 12-person maximum guaranteed</div>
           </div>
 
           <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-4 font-headline">
             <div>
-              <label class="block font-bold uppercase tracking-wider text-white mb-1">Full Legal Name *</label>
-              <input type="text" id="studentName" required placeholder="e.g. Bryan Tan" class="w-full bg-gym-surface border border-gym-border px-4 py-3 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-white font-sans" />
+              <label class="block font-bold uppercase tracking-wider text-black mb-1">Full Legal Name *</label>
+              <input type="text" id="studentName" required placeholder="e.g. Bryan Tan" class="w-full bg-neutral-50 border border-neutral-200 px-4 py-3 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-white font-sans" />
             </div>
 
             <div class="grid grid-cols-2 gap-3">
               <div>
-                <label class="block font-bold uppercase tracking-wider text-white mb-1">WhatsApp Phone *</label>
-                <input type="tel" id="studentPhone" required placeholder="+60 12-345 6789" class="w-full bg-gym-surface border border-gym-border px-4 py-3 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-white font-sans" />
+                <label class="block font-bold uppercase tracking-wider text-black mb-1">WhatsApp Phone *</label>
+                <input type="tel" id="studentPhone" required placeholder="+60 12-345 6789" class="w-full bg-neutral-50 border border-neutral-200 px-4 py-3 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-white font-sans" />
               </div>
               <div>
-                <label class="block font-bold uppercase tracking-wider text-white mb-1">Email Address *</label>
-                <input type="email" id="studentEmail" required placeholder="name@domain.com" class="w-full bg-gym-surface border border-gym-border px-4 py-3 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-white font-sans" />
+                <label class="block font-bold uppercase tracking-wider text-black mb-1">Email Address *</label>
+                <input type="email" id="studentEmail" required placeholder="name@domain.com" class="w-full bg-neutral-50 border border-neutral-200 px-4 py-3 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-white font-sans" />
               </div>
             </div>
 
             <div>
-              <label class="block font-bold uppercase tracking-wider text-white mb-1">Experience Level</label>
-              <select class="w-full bg-gym-surface border border-gym-border px-4 py-3 text-xs text-white focus:outline-none focus:border-white font-sans">
+              <label class="block font-bold uppercase tracking-wider text-black mb-1">Experience Level</label>
+              <select class="w-full bg-neutral-50 border border-neutral-200 px-4 py-3 text-xs text-white focus:outline-none focus:border-white font-sans">
                 <option>Beginner (Zero combat sports)</option>
                 <option>1–6 Months Fundamentals</option>
                 <option>Intermediate (1+ Years striking)</option>
@@ -582,7 +582,7 @@
             </div>
 
             <div class="pt-2">
-              <label class="block font-bold uppercase tracking-wider text-white mb-2">Payment Method</label>
+              <label class="block font-bold uppercase tracking-wider text-black mb-2">Payment Method</label>
               <div class="grid grid-cols-2 gap-2">
                 <label class="border border-gym-border p-3 cursor-pointer hover:border-white flex items-center gap-2 bg-gym-surface">
                   <input type="radio" name="payMethod" value="fpx" checked class="accent-white" />
@@ -595,13 +595,13 @@
               </div>
             </div>
 
-            <button type="submit" id="checkoutBtn" class="w-full bg-white hover:bg-neutral-200 text-black font-black text-xs uppercase tracking-wider py-4 transition-colors mt-4">
+            <button type="submit" id="checkoutBtn" class="w-full bg-black hover:bg-neutral-800 text-white font-black text-xs uppercase tracking-wider py-4 transition-colors shadow-md mt-4">
               Confirm & Secure Mat Spot
             </button>
           </form>
         </div>
 
-        <div class="p-4 border-t border-gym-border text-center text-xs text-neutral-400 font-mono">
+        <div class="p-4 border-t border-gym-border text-center text-xs text-neutral-600 font-mono">
           Questions? Call or WhatsApp: <a href="https://wa.me/60123456789" class="text-white underline font-bold">+60 12-345 6789</a>
         </div>
 
@@ -613,10 +613,10 @@
   <div id="cartDrawer" class="fixed inset-0 z-50 overflow-hidden hidden" role="dialog" aria-modal="true">
     <div class="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity" onclick="toggleCartDrawer()"></div>
     <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-      <div class="pointer-events-auto w-screen max-w-md bg-gym-black border-l border-gym-border flex flex-col justify-between shadow-2xl">
+      <div class="pointer-events-auto w-screen max-w-md bg-white border-l border-neutral-200 flex flex-col justify-between shadow-2xl">
         <div class="p-6 border-b border-gym-border flex items-center justify-between">
-          <h3 class="font-headline font-black text-sm uppercase tracking-wider text-white">Gear Bag</h3>
-          <button onclick="toggleCartDrawer()" class="text-neutral-400 hover:text-white p-1">
+          <h3 class="font-headline font-black text-sm uppercase tracking-wider text-black">Gear Bag</h3>
+          <button onclick="toggleCartDrawer()" class="text-neutral-600 hover:text-black p-1">
             <i data-lucide="x" class="w-5 h-5"></i>
           </button>
         </div>
@@ -625,7 +625,7 @@
 
         <div class="p-6 border-t border-gym-border space-y-4 text-xs font-headline">
           <div class="space-y-2">
-            <div class="flex justify-between text-neutral-400">
+            <div class="flex justify-between text-neutral-600">
               <span>Subtotal</span>
               <span id="cartSubtotal" class="font-bold text-white font-mono">RM 129.00</span>
             </div>
@@ -634,7 +634,7 @@
               <span id="cartTotal" class="font-mono">RM 129.00</span>
             </div>
           </div>
-          <button onclick="alert('Proceeding to Stripe/FPX gateway...'); cart=[]; updateCartBadge(); toggleCartDrawer();" class="w-full bg-white hover:bg-neutral-200 text-black font-black text-xs uppercase tracking-wider py-4 transition-colors">
+          <button onclick="alert('Proceeding to Stripe/FPX gateway...'); cart=[]; updateCartBadge(); toggleCartDrawer();" class="w-full bg-black hover:bg-neutral-800 text-white font-black text-xs uppercase tracking-wider py-4 transition-colors shadow-md">
             Checkout via FPX / Stripe
           </button>
         </div>
@@ -689,7 +689,7 @@
       if (filtered.length === 0) {
         container.innerHTML = `
           <div class="col-span-full text-center py-12 border border-gym-border bg-gym-surface">
-            <p class="text-xs font-mono text-neutral-400">No classes for this discipline on this day.</p>
+            <p class="text-xs font-mono text-neutral-600">No classes for this discipline on this day.</p>
             <button onclick="filterClasses('all')" class="mt-2 text-xs font-bold text-white underline font-headline">Show All</button>
           </div>
         `;
@@ -699,22 +699,22 @@
       container.innerHTML = filtered.map(item => {
         const isUrgent = item.spotsLeft <= 2;
         return `
-          <div class="bg-gym-surface border border-gym-border p-6 flex flex-col justify-between space-y-5 group hover:border-white transition-colors">
+          <div class="bg-neutral-50 border border-neutral-200 p-6 flex flex-col justify-between space-y-5 group hover:border-white transition-colors">
             <div class="space-y-2">
               <div class="flex items-center justify-between text-[11px] font-mono">
-                <span class="text-white font-bold">${item.time}</span>
-                <span class="${isUrgent ? 'text-white bg-gym-accent font-extrabold px-2 py-0.5' : 'text-neutral-400'}">${item.spotsLeft} of ${item.totalCap} spots left</span>
+                <span class="text-black font-bold">${item.time}</span>
+                <span class="${isUrgent ? 'text-white bg-gym-accent font-extrabold px-2 py-0.5' : 'text-neutral-600'}">${item.spotsLeft} of ${item.totalCap} spots left</span>
               </div>
-              <h4 class="font-headline font-black text-lg uppercase text-white group-hover:underline">${item.title}</h4>
-              <div class="text-xs text-neutral-400 font-sans">Coach: ${item.coach} &bull; ${item.typeName}</div>
+              <h4 class="font-headline font-black text-lg uppercase text-black group-hover:underline">${item.title}</h4>
+              <div class="text-xs text-neutral-600 font-sans">Coach: ${item.coach} &bull; ${item.typeName}</div>
             </div>
 
             <div class="pt-4 border-t border-gym-border flex items-center justify-between font-headline">
               <div>
                 <span class="text-[10px] uppercase font-mono text-neutral-500 block">Trial Pass</span>
-                <span class="font-mono text-sm font-bold text-white">${item.price}</span>
+                <span class="font-mono text-sm font-bold text-black">${item.price}</span>
               </div>
-              <button onclick="openBookingModal('${item.title}', '${item.price}', '${item.coach}', '${item.time} (${currentDay.toUpperCase()})')" class="bg-white hover:bg-neutral-200 text-black text-[11px] font-extrabold uppercase tracking-wider px-5 py-2.5 transition-colors">
+              <button onclick="openBookingModal('${item.title}', '${item.price}', '${item.coach}', '${item.time} (${currentDay.toUpperCase()})')" class="bg-black hover:bg-neutral-800 text-white text-[11px] font-extrabold uppercase tracking-wider px-5 py-2.5 transition-colors shadow-sm">
                 Reserve &rarr;
               </button>
             </div>
@@ -728,13 +728,13 @@
     function switchDay(day) {
       currentDay = day;
       document.querySelectorAll('.day-tab').forEach(tab => {
-        tab.classList.remove('bg-white', 'text-black');
-        tab.classList.add('bg-gym-surface', 'text-neutral-400');
+        tab.classList.remove('bg-black', 'text-white', 'shadow-sm');
+        tab.classList.add('bg-gym-surface', 'text-neutral-600');
       });
       const activeTab = document.getElementById(`tab-${day}`);
       if (activeTab) {
-        activeTab.classList.add('bg-white', 'text-black');
-        activeTab.classList.remove('bg-gym-surface', 'text-neutral-400');
+        activeTab.classList.add('bg-black', 'text-white', 'shadow-sm');
+        activeTab.classList.remove('bg-gym-surface', 'text-neutral-600');
       }
       renderSchedule();
     }
@@ -742,11 +742,11 @@
     function filterClasses(type) {
       currentFilter = type;
       document.querySelectorAll('.class-filter-btn').forEach(btn => {
-        btn.classList.remove('bg-white', 'text-black');
-        btn.classList.add('bg-gym-surface', 'text-neutral-400');
+        btn.classList.remove('bg-black', 'text-white');
+        btn.classList.add('bg-gym-surface', 'text-neutral-600');
       });
-      event.currentTarget.classList.add('bg-white', 'text-black');
-      event.currentTarget.classList.remove('bg-gym-surface', 'text-neutral-400');
+      event.currentTarget.classList.add('bg-black', 'text-white');
+      event.currentTarget.classList.remove('bg-gym-surface', 'text-neutral-600');
       renderSchedule();
     }
 
@@ -806,7 +806,7 @@
     function renderCart() {
       const container = document.getElementById('cartItemsContainer');
       if (cart.length === 0) {
-        container.innerHTML = `<div class="text-center py-12 text-neutral-400 text-xs font-mono">Your gear bag is empty.</div>`;
+        container.innerHTML = `<div class="text-center py-12 text-neutral-600 text-xs font-mono">Your gear bag is empty.</div>`;
         document.getElementById('cartSubtotal').innerText = 'RM 0.00';
         document.getElementById('cartTotal').innerText = 'RM 0.00';
         return;
@@ -819,10 +819,10 @@
             <img src="${item.img}" class="w-14 h-14 object-cover" />
             <div class="flex-1">
               <h5 class="font-headline font-bold text-xs text-white">${item.title}</h5>
-              <div class="text-[11px] text-neutral-400 font-mono">Size: ${item.size} &bull; Qty: ${item.qty}</div>
+              <div class="text-[11px] text-neutral-600 font-mono">Size: ${item.size} &bull; Qty: ${item.qty}</div>
               <div class="text-xs font-bold text-white mt-1 font-mono">RM ${(item.price * item.qty).toFixed(2)}</div>
             </div>
-            <button onclick="cart.splice(${idx}, 1); updateCartBadge(); renderCart();" class="text-neutral-400 hover:text-white p-1 text-xs font-mono">Remove</button>
+            <button onclick="cart.splice(${idx}, 1); updateCartBadge(); renderCart();" class="text-neutral-600 hover:text-black p-1 text-xs font-mono">Remove</button>
           </div>
         `;
       }).join('');
