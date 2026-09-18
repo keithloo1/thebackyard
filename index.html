@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THE BACKYARD — Muay Thai & Striking Lab, Kuala Lumpur</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans / Inter / Space Grotesk / Bebas Neue -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Bebas+Neue&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            titan: {
+              black: '#080808',
+              card: '#121212',
+              cardBorder: '#222222',
+              cardHover: '#181818',
+              surface: '#1A1A1A',
+              subtle: '#2A2A2A',
+              textMuted: '#8E8E93',
+              volt: '#CCFF00',        /* Electric Volt Lime from TITAN mockup */
+              voltHover: '#B8E600',
+              voltDark: '#0E1702',
+              orange: '#FF3E00',
+              chalk: '#F4F4F6',
+              white: '#FFFFFF'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Bebas Neue"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace']
+          },
+          borderRadius: {
+            '2xl': '1.25rem',
+            '3xl': '1.75rem',
+            '4xl': '2.25rem'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #080808;
+      color: #FFFFFF;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection {
+      background: #CCFF00;
+      color: #000000;
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #080808;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #222222;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #CCFF00;
+    }
+    .bento-pill {
+      background-color: #1A1A1A;
+      border: 1px solid #2B2B2B;
+      color: #FFFFFF;
+    }
+    .tab-active {
+      background-color: #CCFF00 !important;
+      color: #000000 !important;
+      font-weight: 700 !important;
+      border-color: #CCFF00 !important;
+    }
+  </style>
+</head>
+
+<body class="bg-titan-black text-white selection:bg-titan-volt selection:text-black min-h-screen">
+
+  <!-- WRAPPER CONTAINER: Max Width with Tight Margin Padding to use every inch of screen -->
+  <div class="max-w-[1520px] mx-auto p-3 sm:p-5 lg:p-6 space-y-6 lg:space-y-8">
+
+    <!-- ================= 1. TITAN-STYLE HERO ENCLOSURE (FULL-BLEED DARK ROUNDED CONTAINER) ================= -->
+    <section class="relative rounded-3xl lg:rounded-4xl bg-gradient-to-b from-[#111111] via-[#0C0C0C] to-[#080808] border border-titan-cardBorder overflow-hidden min-h-[85vh] lg:min-h-[92vh] flex flex-col justify-between p-6 sm:p-10 lg:p-12 shadow-2xl">
+      
+      <!-- Background Runner / Fighter Motion Shot -->
+      <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=2200&q=80" alt="Muay Thai Striker" class="w-full h-full object-cover object-center filter contrast-125 opacity-25 scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-r from-titan-black via-titan-black/85 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-titan-black via-transparent to-titan-black/50"></div>
+      </div>
+
+      <!-- A. TOP NAVIGATION BAR (DIRECT TITAN REPLICA) -->
+      <header class="relative z-20 flex items-center justify-between">
+        <!-- Logo Wordmark (Punchy Condensed Industrial) -->
+        <a href="#" class="flex items-center gap-2 group">
+          <span class="font-display text-4xl lg:text-5xl tracking-tight text-white uppercase group-hover:text-titan-volt transition-colors">
+            .BACKYARD
+          </span>
+        </a>
+
+        <!-- Center Links -->
+        <nav class="hidden md:flex items-center space-x-7 text-xs font-medium text-titan-textMuted uppercase tracking-wider">
+          <a href="#gauntlet" class="hover:text-white transition-colors">10 Stations</a>
+          <a href="#zones" class="hover:text-white transition-colors">Combat Zones</a>
+          <a href="#timetable" class="hover:text-white transition-colors">Schedule</a>
+          <a href="#pricing" class="hover:text-white transition-colors">Memberships</a>
+          <a href="#pro-shop" class="hover:text-white transition-colors">Pro Shop</a>
+          <a href="#corporate" class="hover:text-white transition-colors">Corporate</a>
+        </nav>
+
+        <!-- Right Buttons -->
+        <div class="flex items-center space-x-3">
+          <button onclick="toggleCartDrawer()" class="relative p-2.5 rounded-full bg-titan-surface border border-titan-cardBorder hover:border-titan-volt text-white transition-all" title="Equipment Cart">
+            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+            <span id="cartBadge" class="absolute -top-1 -right-1 bg-titan-volt text-black text-[9px] font-mono font-bold w-4 h-4 rounded-full flex items-center justify-center">1</span>
+          </button>
+
+          <button onclick="openBookingModal('First Strike Trial Session', 'RM 10', 'Lead Kru Adli & Team', 'Upcoming Available Slot')" class="bg-white hover:bg-titan-volt text-black font-bold text-xs uppercase tracking-wider px-5 sm:px-6 py-2.5 rounded-full transition-all duration-200 flex items-center gap-2 shadow-md">
+            <span>Try for RM 10</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- B. HERO HEADLINE & DIRECT CTA CLUSTER -->
+      <div class="relative z-10 my-auto py-12 lg:py-16 max-w-2xl space-y-6">
+        <h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[0.94] text-white">
+          Be sharper.<br>
+          Be stronger.<br>
+          Be confident.
+        </h1>
+        <p class="text-sm sm:text-base text-titan-textMuted max-w-lg leading-relaxed">
+          From beginner fundamentals to ring conditioning. 10-station fight circuits, guaranteed 1-on-1 coach pad work, and maximum 12 people per session.
+        </p>
+
+        <!-- Hero Buttons (Volt Pill + Ghost Pill) -->
+        <div class="flex flex-wrap items-center gap-3 pt-2">
+          <!-- Primary Pill with Arrow Badge -->
+          <button onclick="openBookingModal('First Strike Trial Session', 'RM 10', 'Lead Kru Adli & Team', 'Upcoming Available Slot')" class="bg-titan-volt hover:bg-titan-voltHover text-black font-extrabold text-xs uppercase tracking-wider px-6 py-3.5 rounded-full flex items-center gap-2.5 transition-all transform active:scale-95 shadow-lg">
+            <span>Try for RM 10</span>
+            <div class="w-5 h-5 rounded-full bg-black text-titan-volt flex items-center justify-center">
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 stroke-[3]"></i>
+            </div>
+          </button>
+
+          <!-- Secondary Glass Pill -->
+          <a href="#gauntlet" class="bg-titan-surface/80 hover:bg-titan-surface text-white border border-titan-cardBorder font-semibold text-xs tracking-wider px-6 py-3.5 rounded-full transition-all flex items-center gap-2">
+            <span>More about The Backyard</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- C. BOTTOM BENTO BAR: 3 COMPACT WIDGET CARDS (EXACT TITAN HERO FOOTER) -->
+      <div class="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-4 pt-6 border-t border-titan-cardBorder/60">
+        
+        <!-- Widget 1: Social Proof Card (White Solid Card) -->
+        <div class="md:col-span-4 bg-white text-black p-5 rounded-2xl flex flex-col justify-between shadow-xl">
+          <div class="flex items-center gap-3">
+            <!-- Avatars -->
+            <div class="flex -space-x-2 overflow-hidden">
+              <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Member" />
+              <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Member" />
+              <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Member" />
+            </div>
+            <div>
+              <div class="font-extrabold text-lg leading-none">1,200+</div>
+              <div class="text-[10px] text-neutral-500 uppercase tracking-wider font-semibold">Active KL Strikers</div>
+            </div>
+          </div>
+          <p class="text-[11px] text-neutral-600 leading-snug mt-3 font-medium">
+            They arrive with different goals, yet all find technical precision and genuine pad rounds without crowded intimidation.
+          </p>
+        </div>
+
+        <!-- Widget 2: Micro Quote / Carousel Pill (Dark Glass Card) -->
+        <div class="md:col-span-4 bg-titan-surface/90 border border-titan-cardBorder p-5 rounded-2xl flex flex-col justify-between backdrop-blur-md">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-1.5 text-xs text-titan-textMuted">
+              <button class="w-6 h-6 rounded-full bg-titan-card hover:bg-titan-subtle flex items-center justify-center text-white"><i data-lucide="chevron-left" class="w-3.5 h-3.5"></i></button>
+              <button class="w-6 h-6 rounded-full bg-titan-card hover:bg-titan-subtle flex items-center justify-center text-white"><i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></button>
+            </div>
+            <span class="text-[10px] font-mono text-titan-volt font-bold uppercase">ROUND 06 &bull; COACH PADS</span>
+          </div>
+          <p class="text-xs text-white leading-relaxed my-2 font-medium">
+            "Every student hits the pads with the coach every session. Nobody stands idle, nobody gets forgotten."
+          </p>
+          <div class="flex items-center justify-between text-[10px] font-mono text-titan-textMuted pt-2 border-t border-titan-cardBorder/60">
+            <span>Bangsar, Kuala Lumpur</span>
+            <span>Strict 12 Pax Cap</span>
+          </div>
+        </div>
+
+        <!-- Widget 3: Electric Volt Promo Card (Bright Accent Card) -->
+        <div onclick="openBookingModal('Trial Session Fast-Pass', 'RM 10', 'Coaching Staff', 'Next Available Slot')" class="md:col-span-4 bg-titan-volt text-black p-5 rounded-2xl flex flex-col justify-between cursor-pointer hover:bg-titan-voltHover transition-all shadow-xl group">
+          <div class="flex justify-between items-start">
+            <span class="text-[11px] font-mono font-extrabold uppercase tracking-widest bg-black/10 px-2 py-0.5 rounded">NEW FIGHTER SPECIAL</span>
+            <div class="w-7 h-7 rounded-full bg-black text-titan-volt flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i data-lucide="arrow-up-right" class="w-4 h-4 stroke-[3]"></i>
+            </div>
+          </div>
+          <div class="mt-4">
+            <div class="text-2xl lg:text-3xl font-extrabold tracking-tight leading-tight">Claim RM 10 Trial Pass</div>
+            <p class="text-xs text-black/80 font-medium mt-1">Book now to secure 1 of 12 guaranteed spots for tonight's gauntlet.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= 2. SECTION 2: THREE-COLUMN ZONE SHOWCASE (EXACT TITAN SECTION 2) ================= -->
+    <section id="zones" class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
+      
+      <!-- Left Card: Welcome Headline & Action (Col 1-4) -->
+      <div class="lg:col-span-4 bg-titan-card border border-titan-cardBorder rounded-3xl p-8 sm:p-10 flex flex-col justify-between space-y-8">
+        <div class="space-y-6">
+          <div class="inline-block px-4 py-1.5 rounded-full border border-titan-cardBorder text-xs font-semibold text-white uppercase tracking-wider bg-titan-surface">
+            Fight Lab Facility
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+            Welcome to The Backyard Gym, where strikers forge both body and tactical mind.
+          </h2>
+          <p class="text-sm text-titan-textMuted leading-relaxed">
+            We tore down the sterile corporate gym model to create a dedicated industrial fight environment: custom steel bag racks, championship mats, and real Thai pad feedback.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <button onclick="openBookingModal('Mat Tour & Trial Class', 'RM 10', 'Head Coach', 'Any Available Slot')" class="bg-white hover:bg-titan-volt text-black font-extrabold text-xs uppercase tracking-wider px-6 py-3.5 rounded-full flex items-center gap-2 transition-all">
+            <span>Explore Lab</span>
+            <div class="w-4 h-4 rounded-full bg-black text-white flex items-center justify-center">
+              <i data-lucide="arrow-up-right" class="w-3 h-3 stroke-[3]"></i>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Middle Card: Heavy Bag Striking Zone (Col 5-8) -->
+      <div class="lg:col-span-4 relative rounded-3xl overflow-hidden min-h-[420px] group border border-titan-cardBorder shadow-xl">
+        <img src="https://images.unsplash.com/photo-1517438476312-10d79c077509?auto=format&fit=crop&w=900&q=80" alt="Power Zone" class="w-full h-full object-cover filter contrast-115 brightness-75 group-hover:scale-105 transition-transform duration-700" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+        
+        <!-- Top Pill Tag -->
+        <div class="absolute top-5 left-5">
+          <span class="bg-white/95 backdrop-blur-md text-black font-bold text-xs px-4 py-1.5 rounded-full uppercase tracking-wider">
+            Striking Alley
+          </span>
+        </div>
+
+        <!-- Bottom Description + Arrow Trigger -->
+        <div class="absolute bottom-6 left-6 right-6 flex items-end justify-between">
+          <div class="max-w-[80%]">
+            <h3 class="text-xl font-extrabold text-white">Heavy Bag Combat Alley</h3>
+            <p class="text-xs text-neutral-300 mt-1">6ft teardrop & banana leather bags for Dutch combos & teep control.</p>
+          </div>
+          <div class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md text-white border border-white/30 flex items-center justify-center group-hover:bg-titan-volt group-hover:text-black transition-all">
+            <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Card: 1-on-1 Coach Pad Ring & Assault Zone (Col 9-12) -->
+      <div class="lg:col-span-4 relative rounded-3xl overflow-hidden min-h-[420px] group border border-titan-cardBorder shadow-xl">
+        <img src="https://images.unsplash.com/photo-1583473848882-f9a5bc7fd208?auto=format&fit=crop&w=900&q=80" alt="Cardio Zone" class="w-full h-full object-cover filter contrast-115 brightness-75 group-hover:scale-105 transition-transform duration-700" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+        
+        <!-- Top Pill Tag -->
+        <div class="absolute top-5 left-5">
+          <span class="bg-white/95 backdrop-blur-md text-black font-bold text-xs px-4 py-1.5 rounded-full uppercase tracking-wider">
+            Coach Pad Ring
+          </span>
+        </div>
+
+        <!-- Bottom Description + Carousel Buttons -->
+        <div class="absolute bottom-6 left-6 right-6 flex items-end justify-between">
+          <div class="max-w-[70%]">
+            <h3 class="text-xl font-extrabold text-white">Dedicated 1-on-1 Ring</h3>
+            <p class="text-xs text-neutral-300 mt-1">Every fighter receives direct pad rounds with certified stadium coaches.</p>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <button class="w-9 h-9 rounded-full bg-black/60 text-white hover:bg-titan-volt hover:text-black flex items-center justify-center border border-titan-cardBorder transition-all"><i data-lucide="chevron-left" class="w-4 h-4"></i></button>
+            <button class="w-9 h-9 rounded-full bg-black/60 text-white hover:bg-titan-volt hover:text-black flex items-center justify-center border border-titan-cardBorder transition-all"><i data-lucide="chevron-right" class="w-4 h-4"></i></button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ================= 3. SECTION 3: THE HIGH-DENSITY BENTO GRID (EXACT TITAN SECTION 3) ================= -->
+    <section id="gauntlet" class="bg-titan-card border border-titan-cardBorder rounded-3xl lg:rounded-4xl p-6 sm:p-8 lg:p-10">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-6 border-b border-titan-cardBorder gap-4">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-titan-volt font-bold">THE 10-STATION BLUEPRINT</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-1">Gym Spec & Equipment Gauntlet</h2>
+        </div>
+        <p class="text-xs text-titan-textMuted max-w-md font-mono">
+          High-density infrastructure. Zero waiting time. Maximum lactate threshold output.
+        </p>
+      </div>
+
+      <!-- Bento Matrix Grid (3 Columns: Left Info Tiles, Middle Highlight Poster with .T graphic, Right Feature Tiles) -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4 lg:gap-5">
+        
+        <!-- LEFT COLUMN: 3 Compact Stacked Cards (Col 1-4) -->
+        <div class="md:col-span-4 flex flex-col gap-4">
+          
+          <!-- Tile 1: Star icon + 5+ Years Coaches -->
+          <div class="bg-titan-surface border border-titan-cardBorder rounded-2xl p-6 flex items-center gap-5 hover:border-titan-volt/50 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-titan-card flex items-center justify-center text-titan-volt shrink-0">
+              <!-- Geometric 8-point star icon similar to Titan -->
+              <i data-lucide="sparkles" class="w-7 h-7 stroke-[1.75]"></i>
+            </div>
+            <div>
+              <h4 class="font-extrabold text-sm sm:text-base text-white leading-snug">Professional fight coaches</h4>
+              <p class="text-xs text-titan-textMuted mt-0.5">Stadium champions with 10+ years ring experience.</p>
+            </div>
+          </div>
+
+          <!-- Tile 2: Plus Icon + Fight Conditioning -->
+          <div class="bg-titan-surface border border-titan-cardBorder rounded-2xl p-6 flex items-center gap-5 hover:border-titan-volt/50 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-titan-card flex items-center justify-center text-white shrink-0">
+              <i data-lucide="plus" class="w-7 h-7 stroke-[2.5]"></i>
+            </div>
+            <div>
+              <h4 class="font-extrabold text-sm sm:text-base text-white leading-snug">Sports physical recovery</h4>
+              <p class="text-xs text-titan-textMuted mt-0.5">On-site Thai boxing liniment & hand wrap clinic.</p>
+            </div>
+          </div>
+
+          <!-- Tile 3: Dual Mini Bento (4 Zones + Recovery Shake Bar) -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-titan-surface border border-titan-cardBorder rounded-2xl p-5 flex flex-col justify-between">
+              <span class="font-display text-4xl text-titan-volt">4</span>
+              <span class="text-xs font-bold text-white leading-tight">Combat Zones</span>
+            </div>
+            <div class="bg-titan-surface border border-titan-cardBorder rounded-2xl p-5 flex flex-col justify-between">
+              <i data-lucide="cup-soda" class="w-6 h-6 text-white mb-2"></i>
+              <span class="text-xs font-bold text-white leading-tight">Hydration & Electrolyte bar</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CENTER COLUMN: Large Feature Poster with Big .BY graphic overlay (Col 5-8) -->
+        <div class="md:col-span-4 relative rounded-2xl overflow-hidden min-h-[380px] md:min-h-full border border-titan-cardBorder group shadow-xl">
+          <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=900&q=80" alt="Training Center" class="w-full h-full object-cover filter contrast-125 brightness-75 group-hover:scale-105 transition-transform duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+
+          <!-- Big Neon Graphic (Homage to Titan's giant lime .T logo) -->
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div class="font-display text-8xl sm:text-9xl font-black text-titan-volt drop-shadow-[0_10px_35px_rgba(204,255,0,0.4)]">
+              .BY
+            </div>
+          </div>
+
+          <div class="absolute bottom-5 left-5 right-5 text-center">
+            <span class="bg-black/80 backdrop-blur-md text-white text-[11px] font-mono px-4 py-1.5 rounded-full border border-titan-cardBorder uppercase">
+              10-Station Continuous Circuit
+            </span>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: 4 Bento Cards (Col 9-12) -->
+        <div class="md:col-span-4 flex flex-col gap-4">
+          
+          <!-- Top Row: Wi-Fi Free + Cold Plunge / Towel -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-titan-surface border border-titan-cardBorder rounded-2xl p-5 flex flex-col justify-between hover:border-titan-volt/50 transition-colors">
+              <i data-lucide="wifi" class="w-7 h-7 text-white"></i>
+              <span class="text-xs font-bold text-white mt-3">High-speed Wi-Fi</span>
+            </div>
+            <div class="bg-titan-surface border border-titan-cardBorder rounded-2xl p-5 flex flex-col justify-between hover:border-titan-volt/50 transition-colors">
+              <i data-lucide="shower-head" class="w-7 h-7 text-white"></i>
+              <span class="text-xs font-bold text-white mt-3">Hot showers & towel</span>
+            </div>
+          </div>
+
+          <!-- Middle Tile: Smart Watch / Anaerobic Heart-Rate Analysis -->
+          <div class="bg-titan-surface border border-titan-cardBorder rounded-2xl p-6 flex items-center gap-5 hover:border-titan-volt/50 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-titan-card flex items-center justify-center text-titan-volt shrink-0">
+              <i data-lucide="watch" class="w-7 h-7"></i>
+            </div>
+            <div>
+              <h4 class="font-extrabold text-sm sm:text-base text-white leading-snug">Calorie & Heart Rate Burn</h4>
+              <p class="text-xs text-titan-textMuted mt-0.5">Average 850–1,100 kcal consumed per 60-min session.</p>
+            </div>
+          </div>
+
+          <!-- Bottom Row: Massage Guns + 450 M2 Facility Size -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-titan-surface border border-titan-cardBorder rounded-2xl p-5 flex flex-col justify-between">
+              <span class="text-xs font-bold text-white leading-tight">Theragun percussion stations</span>
+              <span class="text-[10px] text-titan-textMuted font-mono mt-2">Free for members</span>
+            </div>
+            <div class="bg-titan-surface border border-titan-cardBorder rounded-2xl p-5 flex flex-col justify-between">
+              <span class="font-display text-4xl text-white">450 M²</span>
+              <span class="text-xs font-bold text-titan-textMuted leading-tight">Total Mat Space</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= 4. LIVE INTERACTIVE TIMETABLE & CAPACITY LOCKOUT ================= -->
+    <section id="timetable" class="bg-titan-card border border-titan-cardBorder rounded-3xl p-6 sm:p-8 lg:p-10">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-6 border-b border-titan-cardBorder gap-6">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-titan-volt font-bold">REAL-TIME MAT BOOKINGS</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-1">Daily Schedule & Slot Lockout</h2>
+          <p class="text-xs text-titan-textMuted mt-1">Strict 12-person cap per intake. Guaranteed 1-on-1 coach pad work.</p>
+        </div>
+
+        <!-- Discipline Filter Pills -->
+        <div class="flex flex-wrap gap-2">
+          <button onclick="filterClasses('all')" class="class-filter-btn px-4 py-2 text-xs font-bold rounded-full bg-titan-volt text-black transition-all">All Disciplines</button>
+          <button onclick="filterClasses('muay-thai')" class="class-filter-btn px-4 py-2 text-xs font-bold rounded-full bg-titan-surface border border-titan-cardBorder text-white hover:border-titan-volt transition-all">Muay Thai</button>
+          <button onclick="filterClasses('boxing')" class="class-filter-btn px-4 py-2 text-xs font-bold rounded-full bg-titan-surface border border-titan-cardBorder text-white hover:border-titan-volt transition-all">Technical Boxing</button>
+          <button onclick="filterClasses('sparring')" class="class-filter-btn px-4 py-2 text-xs font-bold rounded-full bg-titan-surface border border-titan-cardBorder text-white hover:border-titan-volt transition-all">Sparring Lab</button>
+        </div>
+      </div>
+
+      <!-- Day Navigation Pills -->
+      <div class="flex overflow-x-auto space-x-2 pb-4 mb-6">
+        <button onclick="switchDay('mon')" id="tab-mon" class="day-tab tab-active px-5 py-2.5 rounded-full text-xs uppercase font-bold tracking-wider transition-all">Monday</button>
+        <button onclick="switchDay('tue')" id="tab-tue" class="day-tab px-5 py-2.5 rounded-full text-xs uppercase font-bold tracking-wider bg-titan-surface border border-titan-cardBorder text-titan-textMuted hover:text-white transition-all">Tuesday</button>
+        <button onclick="switchDay('wed')" id="tab-wed" class="day-tab px-5 py-2.5 rounded-full text-xs uppercase font-bold tracking-wider bg-titan-surface border border-titan-cardBorder text-titan-textMuted hover:text-white transition-all">Wednesday</button>
+        <button onclick="switchDay('thu')" id="tab-thu" class="day-tab px-5 py-2.5 rounded-full text-xs uppercase font-bold tracking-wider bg-titan-surface border border-titan-cardBorder text-titan-textMuted hover:text-white transition-all">Thursday</button>
+        <button onclick="switchDay('fri')" id="tab-fri" class="day-tab px-5 py-2.5 rounded-full text-xs uppercase font-bold tracking-wider bg-titan-surface border border-titan-cardBorder text-titan-textMuted hover:text-white transition-all">Friday</button>
+        <button onclick="switchDay('sat')" id="tab-sat" class="day-tab px-5 py-2.5 rounded-full text-xs uppercase font-bold tracking-wider bg-titan-surface border border-titan-cardBorder text-titan-textMuted hover:text-white transition-all">Saturday (Smoker Club)</button>
+      </div>
+
+      <!-- Dynamic Cards -->
+      <div id="scheduleGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+
+    </section>
+
+
+    <!-- ================= 5. MEMBERSHIP & PASSES (CLEAN TITAN BENTO TIERS) ================= -->
+    <section id="pricing" class="bg-titan-card border border-titan-cardBorder rounded-3xl p-6 sm:p-8 lg:p-10">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-6 border-b border-titan-cardBorder gap-4">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-titan-volt font-bold">TRANSPARENT MAT FEES</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-1">Memberships & Strike Passes</h2>
+        </div>
+        <p class="text-xs text-titan-textMuted font-mono">
+          Zero lock-in contracts &bull; Zero cancellation fees &bull; 1-Click online booking
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+        
+        <!-- Tier 1: Single Pass -->
+        <div class="bg-titan-surface border border-titan-cardBorder rounded-2xl p-7 flex flex-col justify-between space-y-6 hover:border-titan-volt/40 transition-colors">
+          <div>
+            <span class="text-[11px] font-mono uppercase text-titan-textMuted">Drop-In / Visitor</span>
+            <h3 class="text-2xl font-extrabold text-white mt-1">Single Mat Pass</h3>
+            <div class="my-5">
+              <span class="font-display text-5xl text-white">RM 80</span>
+              <span class="text-xs font-mono text-titan-textMuted">/ session</span>
+            </div>
+            <ul class="space-y-3 text-xs text-titan-textMuted border-t border-titan-cardBorder pt-5">
+              <li class="flex items-center gap-2.5 text-white">
+                <i data-lucide="check" class="w-4 h-4 text-titan-volt"></i>
+                <span>60-Min Group Gauntlet Session</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-white">
+                <i data-lucide="check" class="w-4 h-4 text-titan-volt"></i>
+                <span>Dedicated 1-on-1 Coach Pad Round</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-white">
+                <i data-lucide="check" class="w-4 h-4 text-titan-volt"></i>
+                <span>Twins Special sanitized gear usage</span>
+              </li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Single Session Mat Pass', 'RM 80', 'Coach of your slot', 'Valid 30 days')" class="w-full bg-titan-card hover:bg-titan-subtle text-white border border-titan-cardBorder text-xs font-extrabold uppercase tracking-wider py-3.5 rounded-full transition-all">
+            Get Single Pass
+          </button>
+        </div>
+
+        <!-- Tier 2: 10-Class Striking Pass (FEATURED VOLT HIGHLIGHT) -->
+        <div class="bg-titan-surface border-2 border-titan-volt rounded-2xl p-7 flex flex-col justify-between space-y-6 relative shadow-[0_0_30px_rgba(204,255,0,0.12)]">
+          <div class="absolute -top-3 left-6 bg-titan-volt text-black text-[10px] font-mono font-extrabold uppercase px-3 py-0.5 rounded-full">
+            ★ MOST POPULAR VALUE
+          </div>
+          <div>
+            <span class="text-[11px] font-mono uppercase text-titan-volt font-bold">Flexible Regulars</span>
+            <h3 class="text-2xl font-extrabold text-white mt-1">10-Class Striking Pass</h3>
+            <div class="my-5">
+              <span class="font-display text-5xl text-titan-volt">RM 650</span>
+              <span class="text-xs font-mono text-white">/ pack (RM 65 / class)</span>
+            </div>
+            <ul class="space-y-3 text-xs text-white border-t border-titan-cardBorder pt-5 font-medium">
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-titan-volt"></i>
+                <span><strong>90-Day validity</strong> for stress-free pacing</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-titan-volt"></i>
+                <span><strong>Priority booking window</strong> (Lock slots 7 days out)</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-titan-volt"></i>
+                <span>Valid across Muay Thai, Boxing & S&C</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-titan-volt"></i>
+                <span>10% Off all Pro Shop gear</span>
+              </li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('10-Class Striking Pass Pack', 'RM 650', 'Any Coach / Session', 'Valid 90 Days')" class="w-full bg-titan-volt hover:bg-titan-voltHover text-black text-xs font-extrabold uppercase tracking-wider py-4 rounded-full transition-all shadow-md">
+            Claim 10-Class Pass (RM 650)
+          </button>
+        </div>
+
+        <!-- Tier 3: Unlimited Monthly -->
+        <div class="bg-titan-surface border border-titan-cardBorder rounded-2xl p-7 flex flex-col justify-between space-y-6 hover:border-titan-volt/40 transition-colors">
+          <div>
+            <span class="text-[11px] font-mono uppercase text-titan-textMuted">Unrestricted Mat Access</span>
+            <h3 class="text-2xl font-extrabold text-white mt-1">Unlimited Monthly Lab</h3>
+            <div class="my-5">
+              <span class="font-display text-5xl text-white">RM 480</span>
+              <span class="text-xs font-mono text-titan-textMuted">/ month</span>
+            </div>
+            <ul class="space-y-3 text-xs text-titan-textMuted border-t border-titan-cardBorder pt-5">
+              <li class="flex items-center gap-2.5 text-white">
+                <i data-lucide="check" class="w-4 h-4 text-titan-volt"></i>
+                <span>Unlimited sessions across all timetable hours</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-white">
+                <i data-lucide="check" class="w-4 h-4 text-titan-volt"></i>
+                <span>Saturday Smoker technical sparring access</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-white">
+                <i data-lucide="check" class="w-4 h-4 text-titan-volt"></i>
+                <span>Free open mat self-training bag access</span>
+              </li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Unlimited Monthly Membership', 'RM 480/mo', 'Full Head Coaching Staff', 'Recurring Monthly - Cancel Anytime')" class="w-full bg-titan-card hover:bg-titan-subtle text-white border border-titan-cardBorder text-xs font-extrabold uppercase tracking-wider py-3.5 rounded-full transition-all">
+            Join Unlimited Lab
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= 6. CORPORATE RETREATS & FACILITY HIRE ================= -->
+    <section id="corporate" class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+      
+      <div class="lg:col-span-6 bg-titan-card border border-titan-cardBorder rounded-3xl p-8 flex flex-col justify-between space-y-6">
+        <div class="space-y-3">
+          <div class="inline-block px-3 py-1 rounded-full bg-titan-surface border border-titan-cardBorder text-[10px] font-mono text-titan-volt uppercase">CORPORATE PERFORMANCE</div>
+          <h3 class="text-2xl font-extrabold text-white">High-Energy Team Stress Inoculation</h3>
+          <p class="text-xs text-titan-textMuted leading-relaxed">
+            Ditch hollow hotel conferences. Bring your team (up to 12 pax per rotation) to learn authentic striking fundamentals, sharpen team cohesion, and discharge executive stress on the pads.
+          </p>
+          <div class="text-[11px] font-mono text-white/70 pt-1">
+            &bull; HRDF Claimable &bull; Official Invoicing &bull; Custom Catering Options
+          </div>
+        </div>
+        <button onclick="openCorporateModal('Corporate Team Inquiry')" class="bg-white hover:bg-titan-volt text-black text-xs font-extrabold uppercase tracking-wider px-6 py-3.5 rounded-full self-start transition-all">
+          Request Corporate Rates &rarr;
+        </button>
+      </div>
+
+      <div class="lg:col-span-6 bg-titan-card border border-titan-cardBorder rounded-3xl p-8 flex flex-col justify-between space-y-6">
+        <div class="space-y-3">
+          <div class="inline-block px-3 py-1 rounded-full bg-titan-surface border border-titan-cardBorder text-[10px] font-mono text-titan-volt uppercase">MEDIA & PRIVATE PT</div>
+          <h3 class="text-2xl font-extrabold text-white">Full Gym & Studio Mat Rental</h3>
+          <p class="text-xs text-titan-textMuted leading-relaxed">
+            Rent our entire industrial facility, 6 heavy bags, speed ring, and private surround audio for brand commercial video shoots, apparel lookbooks, or private fighter camps.
+          </p>
+          <div class="text-[11px] font-mono text-white/70 pt-1">
+            &bull; From RM 250 / Hour &bull; A/C, Professional Lighting & Full Mat Included
+          </div>
+        </div>
+        <button onclick="openCorporateModal('Facility Rental Inquiry')" class="bg-titan-surface hover:bg-titan-subtle text-white border border-titan-cardBorder text-xs font-extrabold uppercase tracking-wider px-6 py-3.5 rounded-full self-start transition-all">
+          Request Studio Schedule &rarr;
+        </button>
+      </div>
+
+    </section>
+
+
+    <!-- ================= 7. COMBAT PRO SHOP ================= -->
+    <section id="pro-shop" class="bg-titan-card border border-titan-cardBorder rounded-3xl p-6 sm:p-8 lg:p-10">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-6 border-b border-titan-cardBorder gap-4">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-titan-volt font-bold">OFFICIAL COMBAT GEAR</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-1">The Backyard Pro Shop</h2>
+        </div>
+        <p class="text-xs text-titan-textMuted font-mono">
+          Free KL shipping > RM 200 &bull; Same-day pickup at gym desk
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <!-- Product 1 -->
+        <div class="bg-titan-surface border border-titan-cardBorder p-4 rounded-2xl flex flex-col justify-between group hover:border-titan-volt/50 transition-colors">
+          <div class="aspect-square bg-titan-card rounded-xl overflow-hidden mb-3">
+            <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80" alt="Tee" class="w-full h-full object-cover filter contrast-125 group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div>
+            <h4 class="font-extrabold text-sm text-white">Backyard Boxy Combat Tee</h4>
+            <div class="text-[11px] text-titan-textMuted font-mono mt-0.5">260 GSM Heavyweight Washed Black</div>
+          </div>
+          <div class="flex items-center justify-between border-t border-titan-cardBorder pt-3 mt-3">
+            <span class="font-mono text-sm font-bold text-white">RM 129</span>
+            <button onclick="addToCart('Backyard Boxy Combat Tee', 129, 'M', 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=300&q=80')" class="px-3 py-1.5 rounded-full bg-titan-card hover:bg-titan-volt hover:text-black text-xs font-bold text-white transition-colors">
+              + Add
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="bg-titan-surface border border-titan-cardBorder p-4 rounded-2xl flex flex-col justify-between group hover:border-titan-volt/50 transition-colors">
+          <div class="aspect-square bg-titan-card rounded-xl overflow-hidden mb-3">
+            <img src="https://images.unsplash.com/photo-1517438476312-10d79c077509?auto=format&fit=crop&w=600&q=80" alt="Wraps" class="w-full h-full object-cover filter contrast-125 group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div>
+            <h4 class="font-extrabold text-sm text-white">Thai Wraps & Ankle Set</h4>
+            <div class="text-[11px] text-titan-textMuted font-mono mt-0.5">4.5M Mexican Stretch Herringbone</div>
+          </div>
+          <div class="flex items-center justify-between border-t border-titan-cardBorder pt-3 mt-3">
+            <span class="font-mono text-sm font-bold text-white">RM 65</span>
+            <button onclick="addToCart('Thai Wraps & Ankle Set', 65, 'One Size', 'https://images.unsplash.com/photo-1517438476312-10d79c077509?auto=format&fit=crop&w=300&q=80')" class="px-3 py-1.5 rounded-full bg-titan-card hover:bg-titan-volt hover:text-black text-xs font-bold text-white transition-colors">
+              + Add
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="bg-titan-surface border border-titan-cardBorder p-4 rounded-2xl flex flex-col justify-between group hover:border-titan-volt/50 transition-colors">
+          <div class="aspect-square bg-titan-card rounded-xl overflow-hidden mb-3">
+            <img src="https://images.unsplash.com/photo-1583473848882-f9a5bc7fd208?auto=format&fit=crop&w=600&q=80" alt="Shorts" class="w-full h-full object-cover filter contrast-125 group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div>
+            <h4 class="font-extrabold text-sm text-white">Custom Retro Muay Thai Shorts</h4>
+            <div class="text-[11px] text-titan-textMuted font-mono mt-0.5">Matte Black Satin / High Side Slits</div>
+          </div>
+          <div class="flex items-center justify-between border-t border-titan-cardBorder pt-3 mt-3">
+            <span class="font-mono text-sm font-bold text-white">RM 159</span>
+            <button onclick="addToCart('Custom Retro Muay Thai Shorts', 159, 'L', 'https://images.unsplash.com/photo-1583473848882-f9a5bc7fd208?auto=format&fit=crop&w=300&q=80')" class="px-3 py-1.5 rounded-full bg-titan-card hover:bg-titan-volt hover:text-black text-xs font-bold text-white transition-colors">
+              + Add
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="bg-titan-surface border border-titan-cardBorder p-4 rounded-2xl flex flex-col justify-between group hover:border-titan-volt/50 transition-colors">
+          <div class="aspect-square bg-titan-card rounded-xl overflow-hidden mb-3">
+            <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=600&q=80" alt="Towel" class="w-full h-full object-cover filter contrast-125 group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div>
+            <h4 class="font-extrabold text-sm text-white">Microfiber Combat Mat Towel</h4>
+            <div class="text-[11px] text-titan-textMuted font-mono mt-0.5">Silver-Ion Odor Defense & Carabiner</div>
+          </div>
+          <div class="flex items-center justify-between border-t border-titan-cardBorder pt-3 mt-3">
+            <span class="font-mono text-sm font-bold text-white">RM 45</span>
+            <button onclick="addToCart('Microfiber Combat Mat Towel', 45, 'Standard', 'https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=300&q=80')" class="px-3 py-1.5 rounded-full bg-titan-card hover:bg-titan-volt hover:text-black text-xs font-bold text-white transition-colors">
+              + Add
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= 8. COMPACT FOOTER ================= -->
+    <footer class="bg-titan-card border border-titan-cardBorder rounded-3xl p-8 lg:p-10 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-titan-textMuted">
+      <div class="flex items-center gap-3">
+        <span class="font-display text-3xl text-white uppercase">.BACKYARD</span>
+        <span class="text-titan-cardBorder">|</span>
+        <span>Bangsar, Kuala Lumpur &bull; Lot 14-B Industrial Alley</span>
+      </div>
+
+      <div class="flex items-center gap-6 font-mono text-[11px]">
+        <a href="https://wa.me/60123456789" target="_blank" class="hover:text-titan-volt transition-colors">WhatsApp Desk</a>
+        <a href="https://instagram.com" target="_blank" class="hover:text-titan-volt transition-colors">Instagram</a>
+        <a href="#" class="hover:text-white transition-colors">Mat Rules</a>
+        <a href="#" class="hover:text-white transition-colors">Privacy</a>
+      </div>
+
+      <div>
+        &copy; 2026 THE BACKYARD MUAY THAI. ALL RIGHTS RESERVED.
+      </div>
+    </footer>
+
+  </div>
+
+
+  <!-- ================= MODALS & DRAWERS ================= -->
+
+  <!-- A. CLASS BOOKING & CHECKOUT DRAWER -->
+  <div id="bookingDrawer" class="fixed inset-0 z-50 overflow-hidden hidden" role="dialog" aria-modal="true">
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity" onclick="closeBookingModal()"></div>
+
+    <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+      <div class="pointer-events-auto w-screen max-w-md bg-titan-black border-l border-titan-cardBorder flex flex-col justify-between shadow-2xl">
+        
+        <div class="p-6 border-b border-titan-cardBorder bg-titan-card flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-titan-volt"></span>
+            <h3 class="font-extrabold text-base uppercase tracking-wider text-white">Reserve Mat Spot</h3>
+          </div>
+          <button onclick="closeBookingModal()" class="text-titan-textMuted hover:text-white p-1">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <div class="p-6 space-y-5 overflow-y-auto flex-1">
+          
+          <div class="bg-titan-card border border-titan-cardBorder p-4 rounded-2xl space-y-1.5">
+            <div class="flex justify-between items-start">
+              <h4 id="drawerClassTitle" class="font-extrabold text-sm text-white">First Strike Trial Session</h4>
+              <span id="drawerClassPrice" class="font-mono text-xs font-extrabold bg-titan-volt text-black px-2.5 py-0.5 rounded-full">RM 10</span>
+            </div>
+            <div id="drawerClassCoach" class="text-xs text-titan-textMuted">Instructor: Head Kru Adli</div>
+            <div id="drawerClassTime" class="text-xs text-titan-textMuted">Slot: Tonight 7:30 PM</div>
+            <div class="text-[11px] text-titan-volt font-mono pt-1 font-semibold">Strict 12-person maximum guaranteed</div>
+          </div>
+
+          <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-4 text-xs">
+            <div>
+              <label class="block font-bold uppercase tracking-wider text-white mb-1">Full Legal Name *</label>
+              <input type="text" id="studentName" required placeholder="e.g. Bryan Tan" class="w-full bg-titan-surface border border-titan-cardBorder px-4 py-3 text-xs text-white placeholder-titan-textMuted focus:outline-none focus:border-titan-volt rounded-xl" />
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block font-bold uppercase tracking-wider text-white mb-1">WhatsApp Phone *</label>
+                <input type="tel" id="studentPhone" required placeholder="+60 12-345 6789" class="w-full bg-titan-surface border border-titan-cardBorder px-4 py-3 text-xs text-white placeholder-titan-textMuted focus:outline-none focus:border-titan-volt rounded-xl" />
+              </div>
+              <div>
+                <label class="block font-bold uppercase tracking-wider text-white mb-1">Email Address *</label>
+                <input type="email" id="studentEmail" required placeholder="name@domain.com" class="w-full bg-titan-surface border border-titan-cardBorder px-4 py-3 text-xs text-white placeholder-titan-textMuted focus:outline-none focus:border-titan-volt rounded-xl" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block font-bold uppercase tracking-wider text-white mb-1">Striking Experience Level</label>
+              <select class="w-full bg-titan-surface border border-titan-cardBorder px-4 py-3 text-xs text-white focus:outline-none focus:border-titan-volt rounded-xl">
+                <option>Beginner (Zero prior combat sports)</option>
+                <option>1–6 Months Fundamentals</option>
+                <option>Intermediate (1+ Years striking)</option>
+                <option>Amateur / Pro Fighter</option>
+              </select>
+            </div>
+
+            <div class="pt-2">
+              <label class="block font-bold uppercase tracking-wider text-white mb-2">Payment Gateway</label>
+              <div class="grid grid-cols-2 gap-2">
+                <label class="border border-titan-cardBorder p-3 cursor-pointer hover:border-titan-volt flex items-center gap-2 bg-titan-surface rounded-xl">
+                  <input type="radio" name="payMethod" value="fpx" checked class="accent-titan-volt" />
+                  <span class="text-xs font-bold text-white">FPX Online Banking</span>
+                </label>
+                <label class="border border-titan-cardBorder p-3 cursor-pointer hover:border-titan-volt flex items-center gap-2 bg-titan-surface rounded-xl">
+                  <input type="radio" name="payMethod" value="card" class="accent-titan-volt" />
+                  <span class="text-xs font-bold text-white">Credit Card (Stripe)</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="pt-2 flex items-start gap-2">
+              <input type="checkbox" id="waiverCheck" required class="accent-titan-volt mt-0.5" />
+              <label for="waiverCheck" class="text-[11px] text-titan-textMuted">
+                I agree to the gym liability waiver and acknowledge the 12-person mat capacity policy.
+              </label>
+            </div>
+
+            <button type="submit" id="checkoutBtn" class="w-full bg-titan-volt hover:bg-titan-voltHover text-black text-xs font-extrabold uppercase tracking-wider py-4 rounded-full transition-all mt-4">
+              Confirm & Secure Mat Spot
+            </button>
+          </form>
+
+        </div>
+
+        <div class="p-4 border-t border-titan-cardBorder bg-titan-card text-center text-xs text-titan-textMuted">
+          Need help? WhatsApp Desk: <a href="https://wa.me/60123456789" class="text-titan-volt underline font-bold">+60 12-345 6789</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- B. SHOPPING CART DRAWER -->
+  <div id="cartDrawer" class="fixed inset-0 z-50 overflow-hidden hidden" role="dialog" aria-modal="true">
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity" onclick="toggleCartDrawer()"></div>
+    <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+      <div class="pointer-events-auto w-screen max-w-md bg-titan-black border-l border-titan-cardBorder flex flex-col justify-between shadow-2xl">
+        
+        <div class="p-6 border-b border-titan-cardBorder bg-titan-card flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <i data-lucide="shopping-bag" class="w-4 h-4 text-titan-volt"></i>
+            <h3 class="font-extrabold text-sm uppercase tracking-wider text-white">Equipment Cart</h3>
+          </div>
+          <button onclick="toggleCartDrawer()" class="text-titan-textMuted hover:text-white p-1">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <div id="cartItemsContainer" class="p-6 space-y-4 overflow-y-auto flex-1"></div>
+
+        <div class="p-6 border-t border-titan-cardBorder bg-titan-card space-y-4 text-xs">
+          <div class="space-y-2">
+            <div class="flex justify-between text-titan-textMuted">
+              <span>Subtotal</span>
+              <span id="cartSubtotal" class="font-bold text-white font-mono">RM 129.00</span>
+            </div>
+            <div class="flex justify-between text-titan-textMuted">
+              <span>Gym Pickup / Local Delivery</span>
+              <span class="font-bold text-titan-volt">FREE</span>
+            </div>
+            <div class="flex justify-between text-sm font-bold text-white pt-2 border-t border-titan-cardBorder">
+              <span>Total Due</span>
+              <span id="cartTotal" class="text-titan-volt font-mono">RM 129.00</span>
+            </div>
+          </div>
+
+          <button onclick="handleCartCheckout()" class="w-full bg-titan-volt hover:bg-titan-voltHover text-black text-xs font-extrabold uppercase tracking-wider py-4 rounded-full transition-all">
+            Checkout via FPX / Stripe
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- C. CORPORATE INQUIRY MODAL -->
+  <div id="corporateModal" class="fixed inset-0 z-50 overflow-hidden hidden items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeCorporateModal()"></div>
+    <div class="relative bg-titan-card border border-titan-cardBorder w-full max-w-lg p-8 rounded-3xl shadow-2xl z-10 space-y-6">
+      <div class="flex items-center justify-between border-b border-titan-cardBorder pb-4">
+        <div>
+          <span class="text-[10px] font-mono text-titan-volt uppercase tracking-widest font-bold">ENTERPRISE INQUIRY</span>
+          <h3 id="corporateModalTitle" class="text-2xl font-extrabold text-white">Request Corporate Deck</h3>
+        </div>
+        <button onclick="closeCorporateModal()" class="text-titan-textMuted hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <form onsubmit="handleCorporateSubmit(event)" class="space-y-4 text-xs">
+        <div>
+          <label class="block font-bold uppercase tracking-wider text-white mb-1">Company / Organization *</label>
+          <input type="text" required placeholder="e.g. Grab, Petronas, Studio Name" class="w-full bg-titan-surface border border-titan-cardBorder px-4 py-3 text-xs text-white focus:outline-none focus:border-titan-volt rounded-xl" />
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-bold uppercase tracking-wider text-white mb-1">Contact Person *</label>
+            <input type="text" required placeholder="Your Name" class="w-full bg-titan-surface border border-titan-cardBorder px-4 py-3 text-xs text-white focus:outline-none focus:border-titan-volt rounded-xl" />
+          </div>
+          <div>
+            <label class="block font-bold uppercase tracking-wider text-white mb-1">Corporate Email *</label>
+            <input type="email" required placeholder="work@company.com" class="w-full bg-titan-surface border border-titan-cardBorder px-4 py-3 text-xs text-white focus:outline-none focus:border-titan-volt rounded-xl" />
+          </div>
+        </div>
+        <div>
+          <label class="block font-bold uppercase tracking-wider text-white mb-1">Estimated Headcount / Type</label>
+          <select class="w-full bg-titan-surface border border-titan-cardBorder px-4 py-3 text-xs text-white focus:outline-none focus:border-titan-volt rounded-xl">
+            <option>Corporate Stress Inoculation (Up to 12 Pax)</option>
+            <option>Department Team Retreat (12–24 Pax)</option>
+            <option>Commercial Media / Shoot Rental (Hourly)</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full bg-titan-volt hover:bg-titan-voltHover text-black text-xs font-extrabold uppercase tracking-wider py-4 rounded-full transition-all">
+          Submit & Download Prospectus (PDF)
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    const scheduleData = {
+      mon: [
+        { id: 'm1', time: '07:30 AM - 08:30 AM', title: 'Dawn Fight Engine & Muay Thai', type: 'muay-thai', typeName: 'Muay Thai', coach: 'Kru Fahmi (Stadium Champ)', spotsLeft: 2, totalCap: 12, price: 'RM 10 Trial' },
+        { id: 'm2', time: '12:30 PM - 01:30 PM', title: 'Lunchtime Gauntlet Express', type: 'boxing', typeName: 'Technical Boxing', coach: 'Coach Danial', spotsLeft: 4, totalCap: 12, price: 'RM 10 Trial' },
+        { id: 'm3', time: '06:00 PM - 07:00 PM', title: 'Muay Thai Fundamentals & Clinch', type: 'muay-thai', typeName: 'Fundamentals', coach: 'Coach Adli "The Anvil"', spotsLeft: 1, totalCap: 12, price: 'RM 10 Trial' },
+        { id: 'm4', time: '07:30 PM - 08:30 PM', title: 'The 10-Station Fight Gauntlet', type: 'muay-thai', typeName: 'Circuit', coach: 'Kru Fahmi & Adli', spotsLeft: 2, totalCap: 12, price: 'RM 10 Trial' }
+      ],
+      tue: [
+        { id: 't1', time: '07:30 AM - 08:30 AM', title: 'Dutch Drills & Footwork Lab', type: 'boxing', typeName: 'Boxing', coach: 'Coach Danial', spotsLeft: 3, totalCap: 12, price: 'RM 10 Trial' },
+        { id: 't2', time: '06:30 PM - 07:30 PM', title: 'Heavy Bag Power Mechanics', type: 'muay-thai', typeName: 'Muay Thai', coach: 'Kru Fahmi', spotsLeft: 3, totalCap: 12, price: 'RM 10 Trial' },
+        { id: 't3', time: '08:00 PM - 09:00 PM', title: 'Tactical Counter Striking', type: 'boxing', typeName: 'Boxing', coach: 'Coach Danial', spotsLeft: 5, totalCap: 12, price: 'RM 10 Trial' }
+      ],
+      wed: [
+        { id: 'w1', time: '07:30 AM - 08:30 AM', title: 'The Backyard Gauntlet', type: 'muay-thai', typeName: 'Circuit', coach: 'Coach Adli', spotsLeft: 3, totalCap: 12, price: 'RM 10 Trial' },
+        { id: 'w2', time: '12:30 PM - 01:30 PM', title: 'Midday Striking Burnout', type: 'boxing', typeName: 'Boxing', coach: 'Coach Danial', spotsLeft: 4, totalCap: 12, price: 'RM 10 Trial' },
+        { id: 'w3', time: '07:00 PM - 08:30 PM', title: 'Controlled Technical Sparring', type: 'sparring', typeName: 'Sparring', coach: 'Fahmi & Adli', spotsLeft: 2, totalCap: 12, price: 'Members Only' }
+      ],
+      thu: [
+        { id: 'th1', time: '07:30 AM - 08:30 AM', title: 'Teep & Knee Clinch Precision', type: 'muay-thai', typeName: 'Muay Thai', coach: 'Kru Fahmi', spotsLeft: 4, totalCap: 12, price: 'RM 10 Trial' },
+        { id: 'th2', time: '06:30 PM - 07:30 PM', title: 'Boxing Head Movement Lab', type: 'boxing', typeName: 'Boxing', coach: 'Coach Danial', spotsLeft: 3, totalCap: 12, price: 'RM 10 Trial' },
+        { id: 'th3', time: '08:00 PM - 09:00 PM', title: 'The 10-Station Gauntlet', type: 'muay-thai', typeName: 'Circuit', coach: 'Coach Adli', spotsLeft: 1, totalCap: 12, price: 'RM 10 Trial' }
+      ],
+      fri: [
+        { id: 'f1', time: '07:30 AM - 08:30 AM', title: 'Friday Fight Conditioning', type: 'muay-thai', typeName: 'S&C', coach: 'Coach Adli', spotsLeft: 5, totalCap: 12, price: 'RM 10 Trial' },
+        { id: 'f2', time: '06:30 PM - 07:30 PM', title: 'Pad Round Marathon', type: 'muay-thai', typeName: 'Muay Thai', coach: 'Kru Fahmi', spotsLeft: 2, totalCap: 12, price: 'RM 10 Trial' },
+        { id: 'f3', time: '08:00 PM - 09:30 PM', title: 'Friday Night Smoker Drills', type: 'sparring', typeName: 'Sparring', coach: 'Staff', spotsLeft: 2, totalCap: 12, price: 'RM 10 Trial' }
+      ],
+      sat: [
+        { id: 's1', time: '09:00 AM - 10:30 AM', title: 'Saturday Community Gauntlet', type: 'muay-thai', typeName: 'Muay Thai', coach: 'All Coaches Active', spotsLeft: 1, totalCap: 12, price: 'RM 10 Trial' },
+        { id: 's2', time: '11:00 AM - 12:30 PM', title: 'Open Mat Drilling & Hard Pads', type: 'muay-thai', typeName: 'Pads', coach: 'Adli & Fahmi', spotsLeft: 3, totalCap: 12, price: 'RM 10 Trial' },
+        { id: 's3', time: '02:00 PM - 04:00 PM', title: 'The Smoker Club Clinic', type: 'sparring', typeName: 'Masterclass', coach: 'Guest Fighter', spotsLeft: 4, totalCap: 12, price: 'Special Clinic' }
+      ]
+    };
+
+    let currentDay = 'mon';
+    let currentFilter = 'all';
+
+    function renderSchedule() {
+      const container = document.getElementById('scheduleGrid');
+      const classes = scheduleData[currentDay] || [];
+      const filtered = classes.filter(c => currentFilter === 'all' || c.type === currentFilter);
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full text-center py-12 border border-titan-cardBorder rounded-2xl bg-titan-surface">
+            <p class="text-xs font-mono text-titan-textMuted">No classes for this discipline on this day.</p>
+            <button onclick="filterClasses('all')" class="mt-2 text-xs font-bold text-titan-volt underline">Show All</button>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(item => {
+        const isUrgent = item.spotsLeft <= 2;
+        return `
+          <div class="bg-titan-surface border ${isUrgent ? 'border-titan-volt/80' : 'border-titan-cardBorder'} p-5 rounded-2xl flex flex-col justify-between space-y-4 hover:border-titan-volt transition-colors group">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between text-[11px] font-mono">
+                <span class="text-titan-volt font-bold">${item.time}</span>
+                <span class="${isUrgent ? 'text-titan-volt font-extrabold bg-titan-volt/10 px-2 py-0.5 rounded' : 'text-titan-textMuted'}">${item.spotsLeft} of ${item.totalCap} spots left</span>
+              </div>
+              <h3 class="text-base font-extrabold text-white group-hover:text-titan-volt transition-colors">${item.title}</h3>
+              <div class="text-xs text-titan-textMuted font-mono">Coach: ${item.coach} &bull; ${item.typeName}</div>
+            </div>
+
+            <div class="pt-3 border-t border-titan-cardBorder flex items-center justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-mono text-titan-textMuted block">Mat Fee</span>
+                <span class="font-mono text-xs font-bold text-white">${item.price}</span>
+              </div>
+              <button onclick="openBookingModal('${item.title}', '${item.price}', '${item.coach}', '${item.time} (${currentDay.toUpperCase()})')" class="bg-white hover:bg-titan-volt text-black text-[11px] font-extrabold uppercase tracking-wider px-4 py-2 rounded-full transition-all flex items-center gap-1.5">
+                <span>Reserve</span>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    function switchDay(day) {
+      currentDay = day;
+      document.querySelectorAll('.day-tab').forEach(tab => {
+        tab.classList.remove('tab-active');
+        tab.classList.add('bg-titan-surface', 'text-titan-textMuted');
+      });
+      const activeTab = document.getElementById(`tab-${day}`);
+      if (activeTab) {
+        activeTab.classList.add('tab-active');
+        activeTab.classList.remove('bg-titan-surface', 'text-titan-textMuted');
+      }
+      renderSchedule();
+    }
+
+    function filterClasses(type) {
+      currentFilter = type;
+      document.querySelectorAll('.class-filter-btn').forEach(btn => {
+        btn.classList.remove('bg-titan-volt', 'text-black');
+        btn.classList.add('bg-titan-surface', 'text-white');
+      });
+      event.currentTarget.classList.add('bg-titan-volt', 'text-black');
+      event.currentTarget.classList.remove('bg-titan-surface', 'text-white');
+      renderSchedule();
+    }
+
+    function openBookingModal(title, price, coach, time) {
+      document.getElementById('drawerClassTitle').innerText = title || 'First Strike Trial Session';
+      document.getElementById('drawerClassPrice').innerText = price || 'RM 10';
+      document.getElementById('drawerClassCoach').innerText = `Instructor: ${coach || 'Coach Adli / Kru Fahmi'}`;
+      document.getElementById('drawerClassTime').innerText = `Slot: ${time || 'Next Available Slot'}`;
+      document.getElementById('bookingDrawer').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeBookingModal() {
+      document.getElementById('bookingDrawer').classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    function handleBookingSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('checkoutBtn');
+      btn.innerText = 'PROCESSING...';
+      btn.disabled = true;
+      setTimeout(() => {
+        alert('Mat spot reserved! Details dispatched to your WhatsApp.');
+        btn.innerText = 'Confirm & Secure Mat Spot';
+        btn.disabled = false;
+        closeBookingModal();
+      }, 900);
+    }
+
+    let cart = [
+      { id: 'c1', title: 'Backyard Boxy Combat Tee', price: 129, size: 'M', qty: 1, img: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=300&q=80' }
+    ];
+
+    function toggleCartDrawer() {
+      const el = document.getElementById('cartDrawer');
+      if (el.classList.contains('hidden')) {
+        el.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        renderCart();
+      } else {
+        el.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function addToCart(title, price, size, img) {
+      const existing = cart.find(i => i.title === title);
+      if (existing) existing.qty += 1;
+      else cart.push({ id: 'c_' + Date.now(), title, price, size, qty: 1, img });
+      updateCartBadge();
+      toggleCartDrawer();
+    }
+
+    function updateCartBadge() {
+      document.getElementById('cartBadge').innerText = cart.reduce((acc, c) => acc + c.qty, 0);
+    }
+
+    function renderCart() {
+      const container = document.getElementById('cartItemsContainer');
+      if (cart.length === 0) {
+        container.innerHTML = `<div class="text-center py-12 text-titan-textMuted text-xs font-mono">Your equipment bag is empty.</div>`;
+        document.getElementById('cartSubtotal').innerText = 'RM 0.00';
+        document.getElementById('cartTotal').innerText = 'RM 0.00';
+        return;
+      }
+      let subtotal = 0;
+      container.innerHTML = cart.map((item, idx) => {
+        subtotal += item.price * item.qty;
+        return `
+          <div class="flex items-center gap-4 bg-titan-card p-3 rounded-xl border border-titan-cardBorder">
+            <img src="${item.img}" class="w-14 h-14 object-cover rounded-lg bg-titan-surface" />
+            <div class="flex-1">
+              <h5 class="font-bold text-xs text-white">${item.title}</h5>
+              <div class="text-[11px] text-titan-textMuted font-mono">Size: ${item.size} &bull; Qty: ${item.qty}</div>
+              <div class="text-xs font-bold text-titan-volt mt-1 font-mono">RM ${(item.price * item.qty).toFixed(2)}</div>
+            </div>
+            <button onclick="cart.splice(${idx}, 1); updateCartBadge(); renderCart();" class="text-titan-textMuted hover:text-white p-1 text-xs">Remove</button>
+          </div>
+        `;
+      }).join('');
+      document.getElementById('cartSubtotal').innerText = `RM ${subtotal.toFixed(2)}`;
+      document.getElementById('cartTotal').innerText = `RM ${subtotal.toFixed(2)}`;
+    }
+
+    function handleCartCheckout() {
+      alert('Forwarding to Stripe / FPX gateway...');
+      cart = [];
+      updateCartBadge();
+      toggleCartDrawer();
+    }
+
+    function openCorporateModal(title) {
+      if (title) document.getElementById('corporateModalTitle').innerText = title;
+      document.getElementById('corporateModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCorporateModal() {
+      document.getElementById('corporateModal').classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    function handleCorporateSubmit(e) {
+      e.preventDefault();
+      alert('Thank you. Corporate prospectus (PDF) dispatched to your email.');
+      closeCorporateModal();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderSchedule();
+      updateCartBadge();
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
