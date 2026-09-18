@@ -86,22 +86,15 @@
       <!-- Center Links -->
       <nav class="hidden md:flex items-center space-x-9 font-headline text-[13px] font-bold uppercase tracking-wider text-neutral-600">
         <a href="#about" class="hover:text-black transition-colors">About</a>
-        <a href="#gauntlet" class="hover:text-black transition-colors">10 Stations</a>
         <a href="#classes" class="hover:text-black transition-colors">Classes</a>
         <a href="#timetable" class="hover:text-black transition-colors">Timetable</a>
         <a href="#pricing" class="hover:text-black transition-colors">Pricing</a>
-        <a href="#pro-shop" class="hover:text-black transition-colors">Shop</a>
       </nav>
 
       <!-- Cart Icon with Red Badge -->
       <div class="flex items-center gap-5">
-        <button onclick="toggleCartDrawer()" class="relative text-neutral-700 hover:text-black transition-colors p-1" title="Shopping Cart">
-          <i data-lucide="shopping-bag" class="w-5 h-5"></i>
-          <span id="cartBadge" class="absolute -top-1 -right-2 bg-gym-accent text-white text-[9px] font-bold w-4 h-4 rounded-full hidden items-center justify-center">0</span>
-        </button>
-
-        <button onclick="openBookingModal('Trial Session (12-Person Cap)', 'RM 10', 'Lead Kru Adli & Team', 'Upcoming Available Slot')" class="hidden sm:inline-block bg-black hover:bg-neutral-800 text-white font-headline font-bold text-xs uppercase tracking-wider px-5 py-2.5 transition-colors shadow-sm">
-          Book Trial (RM 10)
+        <button onclick="openBookingModal('Trial Session (Includes Free Handwraps)', 'RM 20', 'Lead Kru Adli & Team', 'Upcoming Available Slot')" class="bg-black hover:bg-neutral-800 text-white font-headline font-bold text-xs uppercase tracking-wider px-6 py-2.5 transition-colors shadow-sm">
+          Book Trial (RM 20)
         </button>
       </div>
 
@@ -131,7 +124,7 @@
 
       <!-- Dual Rectangular Buttons (Exact GYMFIT X Style: Solid White + Hollow Outlined) -->
       <div class="flex flex-wrap items-center justify-center gap-4 pt-4 font-headline text-xs font-extrabold uppercase tracking-wider">
-        <button onclick="openBookingModal('Trial Session (12-Person Cap)', 'RM 10', 'Lead Kru Adli & Team', 'Upcoming Available Slot')" class="bg-black hover:bg-neutral-800 text-white px-9 py-4 transition-colors shadow-lg">
+        <button onclick="openBookingModal('Trial Session (Includes Free Handwraps)', 'RM 20', 'Lead Kru Adli & Team', 'Upcoming Available Slot')" class="bg-black hover:bg-neutral-800 text-white px-9 py-4 transition-colors shadow-lg">
           Subscribe Now
         </button>
 
@@ -184,18 +177,30 @@
         </div>
       </div>
 
-      <!-- Column 3: Location -->
+      <!-- Column 3: Location with Google Maps & Waze Buttons -->
       <div class="flex items-start gap-4 border-t md:border-t-0 md:border-l border-neutral-200 pt-6 md:pt-0 md:pl-8">
         <div class="w-10 h-10 rounded border border-neutral-200 bg-neutral-50 flex items-center justify-center text-black shrink-0">
           <i data-lucide="map-pin" class="w-5 h-5"></i>
         </div>
-        <div class="space-y-1.5 font-headline">
-          <span class="text-xs font-extrabold uppercase tracking-wider text-black block">LOCATION</span>
-          <p class="text-neutral-600 leading-relaxed text-[11px]">
-            6-1-1, JALAN JALIL PERKASA 14,<br>
-            ARKED ESPLANAD, 57000 KUALA LUMPUR,<br>
-            WILAYAH PERSEKUTUAN KUALA LUMPUR
-          </p>
+        <div class="space-y-2.5 font-headline w-full">
+          <div>
+            <span class="text-xs font-extrabold uppercase tracking-wider text-black block">LOCATION</span>
+            <p class="text-neutral-600 leading-relaxed text-[11px] mt-0.5">
+              6-1-1, JALAN JALIL PERKASA 14,<br>
+              ARKED ESPLANAD, 57000 KUALA LUMPUR,<br>
+              WILAYAH PERSEKUTUAN KUALA LUMPUR
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center gap-2 pt-1 font-sans">
+            <a href="https://www.google.com/maps/search/?api=1&query=6-1-1%2C+Jalan+Jalil+Perkasa+14%2C+Arked+Esplanad%2C+57000+Kuala+Lumpur" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-black hover:bg-neutral-800 text-white px-3 py-1.5 rounded text-[11px] font-bold tracking-wide transition-colors">
+              <i data-lucide="map" class="w-3.5 h-3.5"></i>
+              <span>Google Maps</span>
+            </a>
+            <a href="https://waze.com/ul?q=6-1-1%20Jalan%20Jalil%20Perkasa%2014%20Arked%20Esplanad%2057000%20Kuala%20Lumpur&navigate=yes" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-neutral-100 hover:bg-neutral-200 text-black border border-neutral-300 px-3 py-1.5 rounded text-[11px] font-bold tracking-wide transition-colors">
+              <i data-lucide="navigation" class="w-3.5 h-3.5"></i>
+              <span>Waze</span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -223,7 +228,7 @@
 
       <!-- Dual Buttons on White (Solid Black + Hollow Black Outline) -->
       <div class="flex flex-wrap items-center justify-center gap-4 pt-4 font-headline text-xs font-extrabold uppercase tracking-wider">
-        <button onclick="openBookingModal('First Strike Trial Session', 'RM 10', 'Lead Kru Adli & Team', 'Upcoming Available Slot')" class="bg-black hover:bg-neutral-800 text-white px-9 py-4 transition-colors">
+        <button onclick="openBookingModal('First Strike Trial Session (Includes Free Handwraps)', 'RM 20', 'Lead Kru Adli & Team', 'Upcoming Available Slot')" class="bg-black hover:bg-neutral-800 text-white px-9 py-4 transition-colors">
           Subscribe Now
         </button>
 
@@ -297,8 +302,8 @@
             <h3 class="font-headline font-extrabold text-2xl uppercase text-white">Muay Thai Fundamentals</h3>
             <p class="text-xs text-neutral-300 line-clamp-2">Teep control, Dutch combinations, clinch entries, and 1-on-1 coach pad rounds.</p>
             <div class="pt-2 flex items-center justify-between">
-              <span class="text-xs font-mono font-bold text-white">RM 10 Trial Pass</span>
-              <button onclick="openBookingModal('Muay Thai Fundamentals', 'RM 10', 'Head Coach Adli', 'Any Available Morning/Night Slot')" class="text-xs font-headline font-bold uppercase underline hover:text-neutral-300">
+              <span class="text-xs font-mono font-bold text-white">RM 20 Trial (Free Handwraps)</span>
+              <button onclick="openBookingModal('Muay Thai Fundamentals', 'RM 20', 'Head Coach Adli', 'Any Available Morning/Night Slot')" class="text-xs font-headline font-bold uppercase underline hover:text-neutral-300">
                 Reserve Spot &rarr;
               </button>
             </div>
@@ -316,8 +321,8 @@
             <h3 class="font-headline font-extrabold text-2xl uppercase text-white">Technical Boxing & Pads</h3>
             <p class="text-xs text-neutral-300 line-clamp-2">Head movement, rotational power hooks, footwork angling, and mitt work.</p>
             <div class="pt-2 flex items-center justify-between">
-              <span class="text-xs font-mono font-bold text-white">RM 10 Trial Pass</span>
-              <button onclick="openBookingModal('Technical Boxing & Pads', 'RM 10', 'Coach Danial', 'Any Available Slot')" class="text-xs font-headline font-bold uppercase underline hover:text-neutral-300">
+              <span class="text-xs font-mono font-bold text-white">RM 20 Trial (Free Handwraps)</span>
+              <button onclick="openBookingModal('Technical Boxing & Pads', 'RM 20', 'Coach Danial', 'Any Available Slot')" class="text-xs font-headline font-bold uppercase underline hover:text-neutral-300">
                 Reserve Spot &rarr;
               </button>
             </div>
@@ -335,8 +340,8 @@
             <h3 class="font-headline font-extrabold text-2xl uppercase text-white">The 10-Station Gauntlet</h3>
             <p class="text-xs text-neutral-300 line-clamp-2">5 Heavy bag stations + 1 coach pad round + assault bike burnout + 3 S&C stations.</p>
             <div class="pt-2 flex items-center justify-between">
-              <span class="text-xs font-mono font-bold text-white">RM 10 Trial Pass</span>
-              <button onclick="openBookingModal('The 10-Station Gauntlet', 'RM 10', 'Coaching Staff', 'Any Available Slot')" class="text-xs font-headline font-bold uppercase underline hover:text-neutral-300">
+              <span class="text-xs font-mono font-bold text-white">RM 20 Trial (Free Handwraps)</span>
+              <button onclick="openBookingModal('The 10-Station Gauntlet', 'RM 20', 'Coaching Staff', 'Any Available Slot')" class="text-xs font-headline font-bold uppercase underline hover:text-neutral-300">
                 Reserve Spot &rarr;
               </button>
             </div>
@@ -547,7 +552,7 @@
           <div class="bg-neutral-50 border border-neutral-200 p-4 space-y-1.5 font-headline">
             <div class="flex justify-between items-start">
               <h4 id="drawerClassTitle" class="font-bold text-sm text-black">First Strike Trial Session</h4>
-              <span id="drawerClassPrice" class="font-mono text-xs font-bold bg-white text-black px-2.5 py-0.5">RM 10</span>
+              <span id="drawerClassPrice" class="font-mono text-xs font-bold bg-black text-white px-2.5 py-0.5">RM 20 (Free Handwraps)</span>
             </div>
             <div id="drawerClassCoach" class="text-xs text-neutral-600 font-sans">Instructor: Head Kru Adli</div>
             <div id="drawerClassTime" class="text-xs text-neutral-600 font-sans">Slot: Tonight 7:30 PM</div>
@@ -555,48 +560,60 @@
           </div>
 
           <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-4 font-headline">
+            <!-- Full Name -->
             <div>
-              <label class="block font-bold uppercase tracking-wider text-black mb-1">Full Legal Name *</label>
-              <input type="text" id="studentName" required placeholder="e.g. Bryan Tan" class="w-full bg-neutral-50 border border-neutral-200 px-4 py-3 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-white font-sans" />
+              <label class="block font-bold uppercase tracking-wider text-black mb-1">Full Name *</label>
+              <input type="text" id="studentName" required placeholder="e.g. Bryan Tan" class="w-full bg-neutral-50 border border-neutral-300 px-4 py-3 text-xs text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-black font-sans" />
             </div>
 
-            <div class="grid grid-cols-2 gap-3">
+            <!-- Phone Number & Email -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label class="block font-bold uppercase tracking-wider text-black mb-1">WhatsApp Phone *</label>
-                <input type="tel" id="studentPhone" required placeholder="014-337 9316" class="w-full bg-neutral-50 border border-neutral-200 px-4 py-3 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-white font-sans" />
+                <label class="block font-bold uppercase tracking-wider text-black mb-1">Phone Number *</label>
+                <input type="tel" id="studentPhone" required placeholder="e.g. 014-337 9316" class="w-full bg-neutral-50 border border-neutral-300 px-4 py-3 text-xs text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-black font-sans" />
               </div>
               <div>
-                <label class="block font-bold uppercase tracking-wider text-black mb-1">Email Address *</label>
-                <input type="email" id="studentEmail" required placeholder="name@domain.com" class="w-full bg-neutral-50 border border-neutral-200 px-4 py-3 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-white font-sans" />
+                <label class="block font-bold uppercase tracking-wider text-black mb-1">Email *</label>
+                <input type="email" id="studentEmail" required placeholder="name@email.com" class="w-full bg-neutral-50 border border-neutral-300 px-4 py-3 text-xs text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-black font-sans" />
               </div>
             </div>
 
+            <!-- Date of Birth & Gender -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block font-bold uppercase tracking-wider text-black mb-1">Date of Birth (DOB) *</label>
+                <input type="date" id="studentDOB" required class="w-full bg-neutral-50 border border-neutral-300 px-4 py-3 text-xs text-neutral-900 focus:outline-none focus:border-black font-sans" />
+              </div>
+              <div>
+                <label class="block font-bold uppercase tracking-wider text-black mb-1">Gender *</label>
+                <select id="studentGender" required class="w-full bg-neutral-50 border border-neutral-300 px-4 py-3 text-xs text-neutral-900 focus:outline-none focus:border-black font-sans">
+                  <option value="" disabled selected>Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Prefer not to say">Prefer not to say</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Experience Level -->
             <div>
-              <label class="block font-bold uppercase tracking-wider text-black mb-1">Experience Level</label>
-              <select class="w-full bg-neutral-50 border border-neutral-200 px-4 py-3 text-xs text-white focus:outline-none focus:border-white font-sans">
-                <option>Beginner (Zero combat sports)</option>
-                <option>1–6 Months Fundamentals</option>
-                <option>Intermediate (1+ Years striking)</option>
-                <option>Amateur / Pro Fighter</option>
+              <label class="block font-bold uppercase tracking-wider text-black mb-1">Experience Level *</label>
+              <select id="studentExperience" required class="w-full bg-neutral-50 border border-neutral-300 px-4 py-3 text-xs text-neutral-900 focus:outline-none focus:border-black font-sans">
+                <option value="Beginner (First time / Zero experience)">Beginner (First time / Zero combat experience)</option>
+                <option value="Novice (1 - 6 months)">Novice (1 - 6 months training)</option>
+                <option value="Intermediate (6 months - 2 years)">Intermediate (6 months - 2 years)</option>
+                <option value="Advanced / Fighter">Advanced / Active Fighter</option>
               </select>
             </div>
 
-            <div class="pt-2">
-              <label class="block font-bold uppercase tracking-wider text-black mb-2">Payment Method</label>
-              <div class="grid grid-cols-2 gap-2">
-                <label class="border border-neutral-200 p-3 cursor-pointer hover:border-white flex items-center gap-2 bg-gym-surface">
-                  <input type="radio" name="payMethod" value="fpx" checked class="accent-white" />
-                  <span class="text-xs font-bold text-white">FPX Online Banking</span>
-                </label>
-                <label class="border border-neutral-200 p-3 cursor-pointer hover:border-white flex items-center gap-2 bg-gym-surface">
-                  <input type="radio" name="payMethod" value="card" class="accent-white" />
-                  <span class="text-xs font-bold text-white">Credit Card (Stripe)</span>
-                </label>
-              </div>
+            <div class="bg-neutral-100 border border-neutral-200 p-3 text-[11px] text-neutral-600 font-sans leading-relaxed">
+              💬 Submitting will directly open WhatsApp with your details pre-filled so our team can immediately coordinate your trial date & time with you!
             </div>
 
-            <button type="submit" id="checkoutBtn" class="w-full bg-black hover:bg-neutral-800 text-white font-black text-xs uppercase tracking-wider py-4 transition-colors shadow-md mt-4">
-              Confirm & Secure Mat Spot
+            <!-- Submit Button (Direct to WhatsApp) -->
+            <button type="submit" id="checkoutBtn" class="w-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-black text-xs uppercase tracking-wider py-4 transition-colors shadow-md flex items-center justify-center gap-2 mt-4">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Send Info to WhatsApp & Schedule</span>
             </button>
           </form>
         </div>
@@ -646,34 +663,34 @@
   <script>
     const scheduleData = {
       mon: [
-        { id: 'm1', time: '07:30 AM - 08:30 AM', title: 'Dawn Fight Engine & Muay Thai', type: 'muay-thai', typeName: 'Muay Thai', coach: 'Kru Fahmi (Stadium Champ)', spotsLeft: 2, totalCap: 12, price: 'RM 10 Trial' },
-        { id: 'm2', time: '12:30 PM - 01:30 PM', title: 'Lunchtime Gauntlet Express', type: 'boxing', typeName: 'Technical Boxing', coach: 'Coach Danial', spotsLeft: 4, totalCap: 12, price: 'RM 10 Trial' },
-        { id: 'm3', time: '06:00 PM - 07:00 PM', title: 'Muay Thai Fundamentals & Clinch', type: 'muay-thai', typeName: 'Fundamentals', coach: 'Coach Adli "The Anvil"', spotsLeft: 1, totalCap: 12, price: 'RM 10 Trial' },
-        { id: 'm4', time: '07:30 PM - 08:30 PM', title: 'The 10-Station Fight Gauntlet', type: 'muay-thai', typeName: 'Circuit', coach: 'Kru Fahmi & Adli', spotsLeft: 2, totalCap: 12, price: 'RM 10 Trial' }
+        { id: 'm1', time: '07:30 AM - 08:30 AM', title: 'Dawn Fight Engine & Muay Thai', type: 'muay-thai', typeName: 'Muay Thai', coach: 'Kru Fahmi (Stadium Champ)', spotsLeft: 2, totalCap: 12, price: 'RM 20 Trial (Free Handwraps)' },
+        { id: 'm2', time: '12:30 PM - 01:30 PM', title: 'Lunchtime Gauntlet Express', type: 'boxing', typeName: 'Technical Boxing', coach: 'Coach Danial', spotsLeft: 4, totalCap: 12, price: 'RM 20 Trial (Free Handwraps)' },
+        { id: 'm3', time: '06:00 PM - 07:00 PM', title: 'Muay Thai Fundamentals & Clinch', type: 'muay-thai', typeName: 'Fundamentals', coach: 'Coach Adli "The Anvil"', spotsLeft: 1, totalCap: 12, price: 'RM 20 Trial (Free Handwraps)' },
+        { id: 'm4', time: '07:30 PM - 08:30 PM', title: 'The 10-Station Fight Gauntlet', type: 'muay-thai', typeName: 'Circuit', coach: 'Kru Fahmi & Adli', spotsLeft: 2, totalCap: 12, price: 'RM 20 Trial (Free Handwraps)' }
       ],
       tue: [
-        { id: 't1', time: '07:30 AM - 08:30 AM', title: 'Dutch Drills & Footwork Lab', type: 'boxing', typeName: 'Boxing', coach: 'Coach Danial', spotsLeft: 3, totalCap: 12, price: 'RM 10 Trial' },
-        { id: 't2', time: '06:30 PM - 07:30 PM', title: 'Heavy Bag Power Mechanics', type: 'muay-thai', typeName: 'Muay Thai', coach: 'Kru Fahmi', spotsLeft: 3, totalCap: 12, price: 'RM 10 Trial' },
-        { id: 't3', time: '08:00 PM - 09:00 PM', title: 'Tactical Counter Striking', type: 'boxing', typeName: 'Boxing', coach: 'Coach Danial', spotsLeft: 5, totalCap: 12, price: 'RM 10 Trial' }
+        { id: 't1', time: '07:30 AM - 08:30 AM', title: 'Dutch Drills & Footwork Lab', type: 'boxing', typeName: 'Boxing', coach: 'Coach Danial', spotsLeft: 3, totalCap: 12, price: 'RM 20 Trial (Free Handwraps)' },
+        { id: 't2', time: '06:30 PM - 07:30 PM', title: 'Heavy Bag Power Mechanics', type: 'muay-thai', typeName: 'Muay Thai', coach: 'Kru Fahmi', spotsLeft: 3, totalCap: 12, price: 'RM 20 Trial (Free Handwraps)' },
+        { id: 't3', time: '08:00 PM - 09:00 PM', title: 'Tactical Counter Striking', type: 'boxing', typeName: 'Boxing', coach: 'Coach Danial', spotsLeft: 5, totalCap: 12, price: 'RM 20 Trial (Free Handwraps)' }
       ],
       wed: [
-        { id: 'w1', time: '07:30 AM - 08:30 AM', title: 'The Backyard Gauntlet', type: 'muay-thai', typeName: 'Circuit', coach: 'Coach Adli', spotsLeft: 3, totalCap: 12, price: 'RM 10 Trial' },
-        { id: 'w2', time: '12:30 PM - 01:30 PM', title: 'Midday Striking Burnout', type: 'boxing', typeName: 'Boxing', coach: 'Coach Danial', spotsLeft: 4, totalCap: 12, price: 'RM 10 Trial' },
+        { id: 'w1', time: '07:30 AM - 08:30 AM', title: 'The Backyard Gauntlet', type: 'muay-thai', typeName: 'Circuit', coach: 'Coach Adli', spotsLeft: 3, totalCap: 12, price: 'RM 20 Trial (Free Handwraps)' },
+        { id: 'w2', time: '12:30 PM - 01:30 PM', title: 'Midday Striking Burnout', type: 'boxing', typeName: 'Boxing', coach: 'Coach Danial', spotsLeft: 4, totalCap: 12, price: 'RM 20 Trial (Free Handwraps)' },
         { id: 'w3', time: '07:00 PM - 08:30 PM', title: 'Controlled Technical Sparring', type: 'sparring', typeName: 'Sparring', coach: 'Fahmi & Adli', spotsLeft: 2, totalCap: 12, price: 'Members Only' }
       ],
       thu: [
-        { id: 'th1', time: '07:30 AM - 08:30 AM', title: 'Teep & Knee Clinch Precision', type: 'muay-thai', typeName: 'Muay Thai', coach: 'Kru Fahmi', spotsLeft: 4, totalCap: 12, price: 'RM 10 Trial' },
-        { id: 'th2', time: '06:30 PM - 07:30 PM', title: 'Boxing Head Movement Lab', type: 'boxing', typeName: 'Boxing', coach: 'Coach Danial', spotsLeft: 3, totalCap: 12, price: 'RM 10 Trial' },
-        { id: 'th3', time: '08:00 PM - 09:00 PM', title: 'The 10-Station Gauntlet', type: 'muay-thai', typeName: 'Circuit', coach: 'Coach Adli', spotsLeft: 1, totalCap: 12, price: 'RM 10 Trial' }
+        { id: 'th1', time: '07:30 AM - 08:30 AM', title: 'Teep & Knee Clinch Precision', type: 'muay-thai', typeName: 'Muay Thai', coach: 'Kru Fahmi', spotsLeft: 4, totalCap: 12, price: 'RM 20 Trial (Free Handwraps)' },
+        { id: 'th2', time: '06:30 PM - 07:30 PM', title: 'Boxing Head Movement Lab', type: 'boxing', typeName: 'Boxing', coach: 'Coach Danial', spotsLeft: 3, totalCap: 12, price: 'RM 20 Trial (Free Handwraps)' },
+        { id: 'th3', time: '08:00 PM - 09:00 PM', title: 'The 10-Station Gauntlet', type: 'muay-thai', typeName: 'Circuit', coach: 'Coach Adli', spotsLeft: 1, totalCap: 12, price: 'RM 20 Trial (Free Handwraps)' }
       ],
       fri: [
-        { id: 'f1', time: '07:30 AM - 08:30 AM', title: 'Friday Fight Conditioning', type: 'muay-thai', typeName: 'S&C', coach: 'Coach Adli', spotsLeft: 5, totalCap: 12, price: 'RM 10 Trial' },
-        { id: 'f2', time: '06:30 PM - 07:30 PM', title: 'Pad Round Marathon', type: 'muay-thai', typeName: 'Muay Thai', coach: 'Kru Fahmi', spotsLeft: 2, totalCap: 12, price: 'RM 10 Trial' },
-        { id: 'f3', time: '08:00 PM - 09:30 PM', title: 'Friday Night Smoker Drills', type: 'sparring', typeName: 'Sparring', coach: 'Staff', spotsLeft: 2, totalCap: 12, price: 'RM 10 Trial' }
+        { id: 'f1', time: '07:30 AM - 08:30 AM', title: 'Friday Fight Conditioning', type: 'muay-thai', typeName: 'S&C', coach: 'Coach Adli', spotsLeft: 5, totalCap: 12, price: 'RM 20 Trial (Free Handwraps)' },
+        { id: 'f2', time: '06:30 PM - 07:30 PM', title: 'Pad Round Marathon', type: 'muay-thai', typeName: 'Muay Thai', coach: 'Kru Fahmi', spotsLeft: 2, totalCap: 12, price: 'RM 20 Trial (Free Handwraps)' },
+        { id: 'f3', time: '08:00 PM - 09:30 PM', title: 'Friday Night Smoker Drills', type: 'sparring', typeName: 'Sparring', coach: 'Staff', spotsLeft: 2, totalCap: 12, price: 'RM 20 Trial (Free Handwraps)' }
       ],
       sat: [
-        { id: 's1', time: '09:00 AM - 10:30 AM', title: 'Saturday Community Gauntlet', type: 'muay-thai', typeName: 'Muay Thai', coach: 'All Coaches Active', spotsLeft: 1, totalCap: 12, price: 'RM 10 Trial' },
-        { id: 's2', time: '11:00 AM - 12:30 PM', title: 'Open Mat Drilling & Hard Pads', type: 'muay-thai', typeName: 'Pads', coach: 'Adli & Fahmi', spotsLeft: 3, totalCap: 12, price: 'RM 10 Trial' },
+        { id: 's1', time: '09:00 AM - 10:30 AM', title: 'Saturday Community Gauntlet', type: 'muay-thai', typeName: 'Muay Thai', coach: 'All Coaches Active', spotsLeft: 1, totalCap: 12, price: 'RM 20 Trial (Free Handwraps)' },
+        { id: 's2', time: '11:00 AM - 12:30 PM', title: 'Open Mat Drilling & Hard Pads', type: 'muay-thai', typeName: 'Pads', coach: 'Adli & Fahmi', spotsLeft: 3, totalCap: 12, price: 'RM 20 Trial (Free Handwraps)' },
         { id: 's3', time: '02:00 PM - 04:00 PM', title: 'The Smoker Club Clinic', type: 'sparring', typeName: 'Masterclass', coach: 'Guest Fighter', spotsLeft: 4, totalCap: 12, price: 'Special Clinic' }
       ]
     };
@@ -758,7 +775,7 @@
 
     function openBookingModal(title, price, coach, time) {
       document.getElementById('drawerClassTitle').innerText = title || 'First Strike Trial Session';
-      document.getElementById('drawerClassPrice').innerText = price || 'RM 10';
+      document.getElementById('drawerClassPrice').innerText = price || 'RM 20';
       document.getElementById('drawerClassCoach').innerText = `Instructor: ${coach || 'Coach Adli / Kru Fahmi'}`;
       document.getElementById('drawerClassTime').innerText = `Slot: ${time || 'Next Available Slot'}`;
       document.getElementById('bookingDrawer').classList.remove('hidden');
@@ -772,15 +789,34 @@
 
     function handleBookingSubmit(e) {
       e.preventDefault();
-      const btn = document.getElementById('checkoutBtn');
-      btn.innerText = 'PROCESSING...';
-      btn.disabled = true;
-      setTimeout(() => {
-        alert('Mat spot reserved! Confirmation sent to your WhatsApp.');
-        btn.innerText = 'Confirm & Secure Mat Spot';
-        btn.disabled = false;
-        closeBookingModal();
-      }, 900);
+      const name = document.getElementById('studentName').value.trim();
+      const phone = document.getElementById('studentPhone').value.trim();
+      const email = document.getElementById('studentEmail').value.trim();
+      const dob = document.getElementById('studentDOB').value;
+      const gender = document.getElementById('studentGender').value;
+      const exp = document.getElementById('studentExperience').value;
+      const classTitle = document.getElementById('drawerClassTitle').innerText;
+      const classPrice = document.getElementById('drawerClassPrice').innerText;
+      const classSlot = document.getElementById('drawerClassTime').innerText;
+
+      const message = `Hi The Backyard Muay Thai! I would like to reserve a spot.\n\n` +
+        `📌 *Booking Details:*\n` +
+        `• Class: ${classTitle}\n` +
+        `• Fee: ${classPrice}\n` +
+        `• Preference: ${classSlot}\n\n` +
+        `👤 *My Information:*\n` +
+        `• Full Name: ${name}\n` +
+        `• Phone: ${phone}\n` +
+        `• Email: ${email}\n` +
+        `• DOB: ${dob}\n` +
+        `• Gender: ${gender}\n` +
+        `• Experience Level: ${exp}\n\n` +
+        `Looking forward to scheduling my session with you!`;
+
+      const encoded = encodeURIComponent(message);
+      const waUrl = `https://wa.me/60143379316?text=${encoded}`;
+      window.open(waUrl, '_blank');
+      closeBookingModal();
     }
 
     let cart = [];
