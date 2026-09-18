@@ -10,7 +10,7 @@
   <link rel="apple-touch-icon" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Bebas+Neue&family=Pirata+One&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -38,7 +38,8 @@
             headline: ['"Montserrat"', 'sans-serif'],
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
             display: ['"Bebas Neue"', 'sans-serif'],
-            mono: ['"Space Grotesk"', 'monospace']
+            mono: ['"Space Grotesk"', 'monospace'],
+            brand: ['"Pirata One"', 'cursive']
           }
         }
       }
@@ -76,10 +77,9 @@
       
       <!-- Brand Logo Mark with Dumbbell / Fist glyph -->
       <a href="#" class="flex items-center gap-3 group">
-        <div class="flex items-center gap-1.5 font-headline font-black text-xl tracking-wider text-black">
-          <img src="favicon.png" class="w-7 h-7 object-contain inline-block mr-1.5" />
-          <span>BACKYARD</span>
-          <span class="text-xs bg-black text-white px-1.5 py-0.5 rounded font-bold ml-1">LAB</span>
+        <div class="flex items-center gap-2 text-black">
+          <img src="favicon.png" class="w-9 h-9 object-contain inline-block" />
+          <span class="font-brand text-2xl sm:text-3xl tracking-wide font-normal">The Backyard Muay Thai</span>
         </div>
       </a>
 
@@ -97,7 +97,7 @@
       <div class="flex items-center gap-5">
         <button onclick="toggleCartDrawer()" class="relative text-neutral-700 hover:text-black transition-colors p-1" title="Shopping Cart">
           <i data-lucide="shopping-bag" class="w-5 h-5"></i>
-          <span id="cartBadge" class="absolute -top-1 -right-2 bg-gym-accent text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center">1</span>
+          <span id="cartBadge" class="absolute -top-1 -right-2 bg-gym-accent text-white text-[9px] font-bold w-4 h-4 rounded-full hidden items-center justify-center">0</span>
         </button>
 
         <button onclick="openBookingModal('Trial Session (12-Person Cap)', 'RM 10', 'Lead Kru Adli & Team', 'Upcoming Available Slot')" class="hidden sm:inline-block bg-black hover:bg-neutral-800 text-white font-headline font-bold text-xs uppercase tracking-wider px-5 py-2.5 transition-colors shadow-sm">
@@ -122,7 +122,7 @@
     <div class="relative z-10 max-w-4xl mx-auto py-20 space-y-6">
       
       <h1 class="font-headline font-black text-5xl sm:text-7xl lg:text-8xl tracking-tight uppercase text-black leading-[1.02]">
-        THE GYM FOR HIGH<br>IMPACT ATHLETES
+        THE GYM FOR EVERYONE
       </h1>
 
       <p class="text-xs sm:text-sm font-medium text-neutral-600 max-w-xl mx-auto leading-relaxed">
@@ -157,13 +157,13 @@
         </div>
         <div class="space-y-1.5 font-headline">
           <span class="text-xs font-extrabold uppercase tracking-wider text-black block">CONTACT</span>
-          <a href="mailto:info@thebackyardmy.com" class="text-neutral-600 hover:text-black underline block text-[11px]">INFO@THEBACKYARDMY.COM</a>
-          <a href="https://wa.me/60123456789" class="text-neutral-600 hover:text-black block text-[11px]">+60 12-345 6789 (WHATSAPP)</a>
+          <a href="mailto:thebackyardmalaysia@gmail.com" class="text-neutral-600 hover:text-black underline block text-[11px]">THEBACKYARDMALAYSIA@GMAIL.COM</a>
+          <a href="https://wa.me/60143379316" class="text-neutral-600 hover:text-black block text-[11px]">014-337 9316 (WHATSAPP)</a>
         </div>
       </div>
 
       <!-- Column 2: Open Hours -->
-      <div class="flex items-start gap-4 border-t md:border-t-0 md:border-l border-gym-border pt-6 md:pt-0 md:pl-8">
+      <div class="flex items-start gap-4 border-t md:border-t-0 md:border-l border-neutral-200 pt-6 md:pt-0 md:pl-8">
         <div class="w-10 h-10 rounded border border-neutral-200 bg-neutral-50 flex items-center justify-center text-black shrink-0">
           <i data-lucide="clock" class="w-5 h-5"></i>
         </div>
@@ -185,16 +185,16 @@
       </div>
 
       <!-- Column 3: Location -->
-      <div class="flex items-start gap-4 border-t md:border-t-0 md:border-l border-gym-border pt-6 md:pt-0 md:pl-8">
+      <div class="flex items-start gap-4 border-t md:border-t-0 md:border-l border-neutral-200 pt-6 md:pt-0 md:pl-8">
         <div class="w-10 h-10 rounded border border-neutral-200 bg-neutral-50 flex items-center justify-center text-black shrink-0">
           <i data-lucide="map-pin" class="w-5 h-5"></i>
         </div>
         <div class="space-y-1.5 font-headline">
           <span class="text-xs font-extrabold uppercase tracking-wider text-black block">LOCATION</span>
           <p class="text-neutral-600 leading-relaxed text-[11px]">
-            LOT 14-B, INDUSTRIAL ALLEYWAY,<br>
-            OFF JALAN MAAROF, BANGSAR,<br>
-            59100 KUALA LUMPUR
+            6-1-1, JALAN JALIL PERKASA 14,<br>
+            ARKED ESPLANAD, 57000 KUALA LUMPUR,<br>
+            WILAYAH PERSEKUTUAN KUALA LUMPUR
           </p>
         </div>
       </div>
@@ -265,7 +265,7 @@
     <div class="relative z-10 max-w-7xl mx-auto space-y-12">
       
       <!-- Section Header with Left/Right Carousel Controls (Exact GYMFIT X Layout) -->
-      <div class="flex items-end justify-between border-b border-gym-border pb-8">
+      <div class="flex items-end justify-between border-b border-neutral-200 pb-8">
         <div>
           <h2 class="font-headline font-black text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight uppercase">
             DISCOVER ALL OUR<br>CLASSES
@@ -354,7 +354,7 @@
   <section id="timetable" class="bg-white py-24 px-6 border-t border-neutral-200">
     <div class="max-w-7xl mx-auto space-y-10">
       
-      <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-gym-border pb-6 gap-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-neutral-200 pb-6 gap-6">
         <div>
           <span class="text-[10px] font-mono uppercase tracking-widest text-neutral-600 font-bold">REAL-TIME MAT BOOKINGS</span>
           <h3 class="font-headline font-black text-4xl uppercase text-black mt-1">Weekly Mat Timetable</h3>
@@ -363,20 +363,20 @@
         <!-- Discipline Filter Pills -->
         <div class="flex flex-wrap gap-2 text-xs font-headline font-bold uppercase">
           <button onclick="filterClasses('all')" class="class-filter-btn px-4 py-2 bg-white text-black transition-all">All Disciplines</button>
-          <button onclick="filterClasses('muay-thai')" class="class-filter-btn px-4 py-2 bg-gym-surface text-neutral-600 hover:text-black border border-gym-border transition-all">Muay Thai</button>
-          <button onclick="filterClasses('boxing')" class="class-filter-btn px-4 py-2 bg-gym-surface text-neutral-600 hover:text-black border border-gym-border transition-all">Boxing</button>
-          <button onclick="filterClasses('sparring')" class="class-filter-btn px-4 py-2 bg-gym-surface text-neutral-600 hover:text-black border border-gym-border transition-all">Sparring</button>
+          <button onclick="filterClasses('muay-thai')" class="class-filter-btn px-4 py-2 bg-gym-surface text-neutral-600 hover:text-black border border-neutral-200 transition-all">Muay Thai</button>
+          <button onclick="filterClasses('boxing')" class="class-filter-btn px-4 py-2 bg-gym-surface text-neutral-600 hover:text-black border border-neutral-200 transition-all">Boxing</button>
+          <button onclick="filterClasses('sparring')" class="class-filter-btn px-4 py-2 bg-gym-surface text-neutral-600 hover:text-black border border-neutral-200 transition-all">Sparring</button>
         </div>
       </div>
 
       <!-- Day Navigation Tabs -->
       <div class="flex overflow-x-auto space-x-2 pb-2">
         <button onclick="switchDay('mon')" id="tab-mon" class="day-tab bg-white text-black font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Monday</button>
-        <button onclick="switchDay('tue')" id="tab-tue" class="day-tab bg-gym-surface text-neutral-600 hover:text-black border border-gym-border font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Tuesday</button>
-        <button onclick="switchDay('wed')" id="tab-wed" class="day-tab bg-gym-surface text-neutral-600 hover:text-black border border-gym-border font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Wednesday</button>
-        <button onclick="switchDay('thu')" id="tab-thu" class="day-tab bg-gym-surface text-neutral-600 hover:text-black border border-gym-border font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Thursday</button>
-        <button onclick="switchDay('fri')" id="tab-fri" class="day-tab bg-gym-surface text-neutral-600 hover:text-black border border-gym-border font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Friday</button>
-        <button onclick="switchDay('sat')" id="tab-sat" class="day-tab bg-gym-surface text-neutral-600 hover:text-black border border-gym-border font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Saturday (Smoker)</button>
+        <button onclick="switchDay('tue')" id="tab-tue" class="day-tab bg-gym-surface text-neutral-600 hover:text-black border border-neutral-200 font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Tuesday</button>
+        <button onclick="switchDay('wed')" id="tab-wed" class="day-tab bg-gym-surface text-neutral-600 hover:text-black border border-neutral-200 font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Wednesday</button>
+        <button onclick="switchDay('thu')" id="tab-thu" class="day-tab bg-gym-surface text-neutral-600 hover:text-black border border-neutral-200 font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Thursday</button>
+        <button onclick="switchDay('fri')" id="tab-fri" class="day-tab bg-gym-surface text-neutral-600 hover:text-black border border-neutral-200 font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Friday</button>
+        <button onclick="switchDay('sat')" id="tab-sat" class="day-tab bg-gym-surface text-neutral-600 hover:text-black border border-neutral-200 font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Saturday (Smoker)</button>
       </div>
 
       <div id="scheduleGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
@@ -506,15 +506,15 @@
 
 
   <!-- ================= 8. GYMFIT X FOOTER ================= -->
-  <footer class="bg-gym-black border-t border-gym-border py-14 px-6 text-xs text-neutral-600">
+  <footer class="bg-white border-t border-neutral-200 py-14 px-6 text-xs text-neutral-600">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 font-headline uppercase tracking-wider">
-      <div class="flex items-center gap-2 text-black font-black text-lg">
-        <img src="favicon.png" class="w-6 h-6 object-contain inline-block" />
-        <span>THE BACKYARD FIGHT LAB</span>
+      <div class="flex items-center gap-2 text-black">
+        <img src="favicon.png" class="w-7 h-7 object-contain inline-block" />
+        <span class="font-brand text-2xl tracking-wide">The Backyard Muay Thai</span>
       </div>
 
       <div class="flex items-center gap-6 font-mono text-[11px] text-neutral-600">
-        <a href="https://wa.me/60123456789" target="_blank" class="hover:text-white">WhatsApp</a>
+        <a href="https://wa.me/60143379316" target="_blank" class="hover:text-white">WhatsApp</a>
         <a href="https://instagram.com" target="_blank" class="hover:text-white">Instagram</a>
         <a href="#about" class="hover:text-white">About</a>
         <a href="#timetable" class="hover:text-white">Schedule</a>
@@ -536,7 +536,7 @@
     <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
       <div class="pointer-events-auto w-screen max-w-md bg-white border-l border-neutral-200 flex flex-col justify-between shadow-2xl">
         
-        <div class="p-6 border-b border-gym-border flex items-center justify-between">
+        <div class="p-6 border-b border-neutral-200 flex items-center justify-between">
           <h3 class="font-headline font-black text-base uppercase tracking-wider text-black">Reserve Mat Spot</h3>
           <button onclick="closeBookingModal()" class="text-neutral-600 hover:text-black p-1">
             <i data-lucide="x" class="w-5 h-5"></i>
@@ -563,7 +563,7 @@
             <div class="grid grid-cols-2 gap-3">
               <div>
                 <label class="block font-bold uppercase tracking-wider text-black mb-1">WhatsApp Phone *</label>
-                <input type="tel" id="studentPhone" required placeholder="+60 12-345 6789" class="w-full bg-neutral-50 border border-neutral-200 px-4 py-3 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-white font-sans" />
+                <input type="tel" id="studentPhone" required placeholder="014-337 9316" class="w-full bg-neutral-50 border border-neutral-200 px-4 py-3 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-white font-sans" />
               </div>
               <div>
                 <label class="block font-bold uppercase tracking-wider text-black mb-1">Email Address *</label>
@@ -584,11 +584,11 @@
             <div class="pt-2">
               <label class="block font-bold uppercase tracking-wider text-black mb-2">Payment Method</label>
               <div class="grid grid-cols-2 gap-2">
-                <label class="border border-gym-border p-3 cursor-pointer hover:border-white flex items-center gap-2 bg-gym-surface">
+                <label class="border border-neutral-200 p-3 cursor-pointer hover:border-white flex items-center gap-2 bg-gym-surface">
                   <input type="radio" name="payMethod" value="fpx" checked class="accent-white" />
                   <span class="text-xs font-bold text-white">FPX Online Banking</span>
                 </label>
-                <label class="border border-gym-border p-3 cursor-pointer hover:border-white flex items-center gap-2 bg-gym-surface">
+                <label class="border border-neutral-200 p-3 cursor-pointer hover:border-white flex items-center gap-2 bg-gym-surface">
                   <input type="radio" name="payMethod" value="card" class="accent-white" />
                   <span class="text-xs font-bold text-white">Credit Card (Stripe)</span>
                 </label>
@@ -601,8 +601,8 @@
           </form>
         </div>
 
-        <div class="p-4 border-t border-gym-border text-center text-xs text-neutral-600 font-mono">
-          Questions? Call or WhatsApp: <a href="https://wa.me/60123456789" class="text-white underline font-bold">+60 12-345 6789</a>
+        <div class="p-4 border-t border-neutral-200 text-center text-xs text-neutral-600 font-mono">
+          Questions? Call or WhatsApp: <a href="https://wa.me/60143379316" class="text-white underline font-bold">014-337 9316</a>
         </div>
 
       </div>
@@ -614,7 +614,7 @@
     <div class="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity" onclick="toggleCartDrawer()"></div>
     <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
       <div class="pointer-events-auto w-screen max-w-md bg-white border-l border-neutral-200 flex flex-col justify-between shadow-2xl">
-        <div class="p-6 border-b border-gym-border flex items-center justify-between">
+        <div class="p-6 border-b border-neutral-200 flex items-center justify-between">
           <h3 class="font-headline font-black text-sm uppercase tracking-wider text-black">Gear Bag</h3>
           <button onclick="toggleCartDrawer()" class="text-neutral-600 hover:text-black p-1">
             <i data-lucide="x" class="w-5 h-5"></i>
@@ -623,13 +623,13 @@
 
         <div id="cartItemsContainer" class="p-6 space-y-4 overflow-y-auto flex-1"></div>
 
-        <div class="p-6 border-t border-gym-border space-y-4 text-xs font-headline">
+        <div class="p-6 border-t border-neutral-200 space-y-4 text-xs font-headline">
           <div class="space-y-2">
             <div class="flex justify-between text-neutral-600">
               <span>Subtotal</span>
               <span id="cartSubtotal" class="font-bold text-white font-mono">RM 129.00</span>
             </div>
-            <div class="flex justify-between text-sm font-black text-white pt-2 border-t border-gym-border">
+            <div class="flex justify-between text-sm font-black text-white pt-2 border-t border-neutral-200">
               <span>Total Due</span>
               <span id="cartTotal" class="font-mono">RM 129.00</span>
             </div>
@@ -688,7 +688,7 @@
 
       if (filtered.length === 0) {
         container.innerHTML = `
-          <div class="col-span-full text-center py-12 border border-gym-border bg-gym-surface">
+          <div class="col-span-full text-center py-12 border border-neutral-200 bg-gym-surface">
             <p class="text-xs font-mono text-neutral-600">No classes for this discipline on this day.</p>
             <button onclick="filterClasses('all')" class="mt-2 text-xs font-bold text-white underline font-headline">Show All</button>
           </div>
@@ -709,7 +709,7 @@
               <div class="text-xs text-neutral-600 font-sans">Coach: ${item.coach} &bull; ${item.typeName}</div>
             </div>
 
-            <div class="pt-4 border-t border-gym-border flex items-center justify-between font-headline">
+            <div class="pt-4 border-t border-neutral-200 flex items-center justify-between font-headline">
               <div>
                 <span class="text-[10px] uppercase font-mono text-neutral-500 block">Trial Pass</span>
                 <span class="font-mono text-sm font-bold text-black">${item.price}</span>
@@ -783,9 +783,7 @@
       }, 900);
     }
 
-    let cart = [
-      { id: 'c1', title: 'Heavyweight Boxing Tee', price: 129, size: 'M', qty: 1, img: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=300&q=80' }
-    ];
+    let cart = [];
 
     function toggleCartDrawer() {
       const el = document.getElementById('cartDrawer');
@@ -800,7 +798,16 @@
     }
 
     function updateCartBadge() {
-      document.getElementById('cartBadge').innerText = cart.reduce((acc, c) => acc + c.qty, 0);
+      const badge = document.getElementById('cartBadge');
+      const total = cart.reduce((acc, c) => acc + c.qty, 0);
+      badge.innerText = total;
+      if (total > 0) {
+        badge.classList.remove('hidden');
+        badge.classList.add('flex');
+      } else {
+        badge.classList.add('hidden');
+        badge.classList.remove('flex');
+      }
     }
 
     function renderCart() {
@@ -815,7 +822,7 @@
       container.innerHTML = cart.map((item, idx) => {
         subtotal += item.price * item.qty;
         return `
-          <div class="flex items-center gap-4 bg-gym-surface p-3 border border-gym-border">
+          <div class="flex items-center gap-4 bg-gym-surface p-3 border border-neutral-200">
             <img src="${item.img}" class="w-14 h-14 object-cover" />
             <div class="flex-1">
               <h5 class="font-headline font-bold text-xs text-white">${item.title}</h5>
