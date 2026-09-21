@@ -25,7 +25,7 @@
             gym: {
               black: '#0D0D0D',
               dark: '#141414',
-              surface: '#1E1E1E',
+              surface: '#F4F5F7',
               border: '#282828',
               white: '#FFFFFF',
               chalk: '#F6F6F6',
@@ -371,21 +371,21 @@
 
         <!-- Discipline Filter Pills -->
         <div class="flex flex-wrap gap-2 text-xs font-headline font-bold uppercase">
-          <button onclick="filterClasses('all')" class="class-filter-btn px-4 py-2 bg-white text-black transition-all">All Disciplines</button>
-          <button onclick="filterClasses('muay-thai')" class="class-filter-btn px-4 py-2 bg-gym-surface text-neutral-600 hover:text-black border border-neutral-200 transition-all">Muay Thai</button>
-          <button onclick="filterClasses('boxing')" class="class-filter-btn px-4 py-2 bg-gym-surface text-neutral-600 hover:text-black border border-neutral-200 transition-all">Boxing</button>
-          <button onclick="filterClasses('sparring')" class="class-filter-btn px-4 py-2 bg-gym-surface text-neutral-600 hover:text-black border border-neutral-200 transition-all">Sparring</button>
+          <button onclick="filterClasses('all')" class="class-filter-btn px-4 py-2 bg-black text-white shadow-sm transition-all">All Disciplines</button>
+          <button onclick="filterClasses('muay-thai')" class="class-filter-btn px-4 py-2 bg-neutral-100 text-neutral-700 hover:text-black hover:bg-neutral-200 border border-neutral-300 transition-all">Muay Thai</button>
+          <button onclick="filterClasses('boxing')" class="class-filter-btn px-4 py-2 bg-neutral-100 text-neutral-700 hover:text-black hover:bg-neutral-200 border border-neutral-300 transition-all">Boxing</button>
+          <button onclick="filterClasses('sparring')" class="class-filter-btn px-4 py-2 bg-neutral-100 text-neutral-700 hover:text-black hover:bg-neutral-200 border border-neutral-300 transition-all">Sparring</button>
         </div>
       </div>
 
       <!-- Day Navigation Tabs -->
       <div class="flex overflow-x-auto space-x-2 pb-2">
-        <button onclick="switchDay('mon')" id="tab-mon" class="day-tab bg-white text-black font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Monday</button>
-        <button onclick="switchDay('tue')" id="tab-tue" class="day-tab bg-gym-surface text-neutral-600 hover:text-black border border-neutral-200 font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Tuesday</button>
-        <button onclick="switchDay('wed')" id="tab-wed" class="day-tab bg-gym-surface text-neutral-600 hover:text-black border border-neutral-200 font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Wednesday</button>
-        <button onclick="switchDay('thu')" id="tab-thu" class="day-tab bg-gym-surface text-neutral-600 hover:text-black border border-neutral-200 font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Thursday</button>
-        <button onclick="switchDay('fri')" id="tab-fri" class="day-tab bg-gym-surface text-neutral-600 hover:text-black border border-neutral-200 font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Friday</button>
-        <button onclick="switchDay('sat')" id="tab-sat" class="day-tab bg-gym-surface text-neutral-600 hover:text-black border border-neutral-200 font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Saturday (Smoker)</button>
+        <button onclick="switchDay('mon')" id="tab-mon" class="day-tab bg-black text-white shadow-md font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Monday</button>
+        <button onclick="switchDay('tue')" id="tab-tue" class="day-tab bg-neutral-100 text-neutral-700 hover:text-black hover:bg-neutral-200 border border-neutral-300 font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Tuesday</button>
+        <button onclick="switchDay('wed')" id="tab-wed" class="day-tab bg-neutral-100 text-neutral-700 hover:text-black hover:bg-neutral-200 border border-neutral-300 font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Wednesday</button>
+        <button onclick="switchDay('thu')" id="tab-thu" class="day-tab bg-neutral-100 text-neutral-700 hover:text-black hover:bg-neutral-200 border border-neutral-300 font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Thursday</button>
+        <button onclick="switchDay('fri')" id="tab-fri" class="day-tab bg-neutral-100 text-neutral-700 hover:text-black hover:bg-neutral-200 border border-neutral-300 font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Friday</button>
+        <button onclick="switchDay('sat')" id="tab-sat" class="day-tab bg-neutral-100 text-neutral-700 hover:text-black hover:bg-neutral-200 border border-neutral-300 font-headline font-extrabold text-xs uppercase tracking-wider px-6 py-3 transition-all">Saturday (Smoker)</button>
       </div>
 
       <div id="scheduleGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
@@ -516,28 +516,28 @@
 
   
   <!-- ================= MONGKOL THAILAND OFFICIAL PARTNER & STORE SECTION ================= -->
-  <section id="shop" class="bg-neutral-900 text-white py-28 px-6 relative overflow-hidden">
+  <section id="shop" class="bg-white text-neutral-900 py-28 px-6 relative overflow-hidden border-t border-neutral-200">
     
     <!-- Background Watermark Text "MONGKOL" -->
-    <div class="absolute top-10 left-10 font-headline font-black text-7xl sm:text-9xl lg:text-[13rem] watermark-text-dark uppercase pointer-events-none select-none opacity-20">
+    <div class="absolute top-10 left-10 font-headline font-black text-7xl sm:text-9xl lg:text-[13rem] watermark-text uppercase pointer-events-none select-none opacity-50">
       MONGKOL
     </div>
 
     <div class="relative z-10 max-w-7xl mx-auto space-y-12">
       
       <!-- Partner Announcement Banner -->
-      <div class="border border-neutral-800 bg-black/60 backdrop-blur-md p-8 sm:p-10 rounded-xl flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl">
+      <div class="border border-neutral-200 bg-neutral-50 p-8 sm:p-10 rounded-xl flex flex-col lg:flex-row items-center justify-between gap-8 shadow-sm">
         <div class="space-y-3 max-w-2xl">
           <div class="inline-flex items-center gap-2 bg-white text-black px-3 py-1 text-[11px] font-headline font-extrabold uppercase tracking-widest rounded">
             <span>OFFICIAL MALAYSIA DISTRIBUTOR & STOCKIST</span>
           </div>
-          <h2 class="font-headline font-black text-3xl sm:text-5xl uppercase tracking-tight text-white leading-tight">
+          <h2 class="font-headline font-black text-3xl sm:text-5xl uppercase tracking-tight text-black leading-tight">
             MONGKOL THAILAND &times; THE BACKYARD
           </h2>
-          <p class="text-xs sm:text-sm text-neutral-400 font-sans leading-relaxed">
+          <p class="text-xs sm:text-sm text-neutral-600 font-sans leading-relaxed">
             The Backyard is proud to be the official partner, distributor, and premier stockist for <strong>Mongkol Thailand</strong> combat equipment in Malaysia. Handcrafted in Bangkok using 100% genuine premium cowhide leather and competition-proven padding. Direct wholesale stockist pricing with guaranteed authenticity.
           </p>
-          <div class="flex flex-wrap items-center gap-6 pt-2 font-mono text-[11px] text-neutral-400">
+          <div class="flex flex-wrap items-center gap-6 pt-2 font-mono text-[11px] text-neutral-600">
             <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i> 100% Authentic Bangkok Leather</span>
             <span class="flex items-center gap-1.5"><i data-lucide="truck" class="w-4 h-4 text-emerald-400"></i> Ready Stock & Direct Delivery</span>
             <span class="flex items-center gap-1.5"><i data-lucide="award" class="w-4 h-4 text-emerald-400"></i> Wholesale & Gym Inquiries Welcome</span>
@@ -545,29 +545,29 @@
         </div>
 
         <div class="flex flex-col sm:flex-row items-center gap-4 shrink-0">
-          <a href="https://wa.me/60143379316?text=Hi%20The%20Backyard!%20I%20am%20interested%20in%20becoming%20a%20sub-dealer%20or%20buying%20bulk%20Mongkol%20gear." target="_blank" class="bg-transparent hover:bg-white/10 text-white border border-neutral-700 px-6 py-3.5 text-xs font-headline font-bold uppercase tracking-wider transition-colors text-center">
+          <a href="https://wa.me/60143379316?text=Hi%20The%20Backyard!%20I%20am%20interested%20in%20becoming%20a%20sub-dealer%20or%20buying%20bulk%20Mongkol%20gear." target="_blank" class="bg-white hover:bg-neutral-100 text-black border border-neutral-300 px-6 py-3.5 text-xs font-headline font-bold uppercase tracking-wider transition-colors text-center shadow-sm">
             Bulk / Gym Wholesale
           </a>
-          <button onclick="document.getElementById('mongkolCatalogGrid').scrollIntoView({behavior: 'smooth'})" class="bg-white hover:bg-neutral-200 text-black px-7 py-3.5 text-xs font-headline font-black uppercase tracking-wider transition-colors shadow-lg text-center">
+          <button onclick="document.getElementById('mongkolCatalogGrid').scrollIntoView({behavior: 'smooth'})" class="bg-black hover:bg-neutral-800 text-white px-7 py-3.5 text-xs font-headline font-black uppercase tracking-wider transition-colors shadow-md text-center">
             Browse Gear Below &darr;
           </button>
         </div>
       </div>
 
       <!-- Category Filter Pills -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-neutral-800 pb-6 gap-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-neutral-200 pb-6 gap-6">
         <div>
-          <span class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 font-bold">2026 MONGKOL PRODUCT MENU</span>
-          <h3 class="font-headline font-black text-3xl sm:text-4xl uppercase text-white mt-1">Official Gear Catalog</h3>
+          <span class="text-[10px] font-mono uppercase tracking-widest text-neutral-500 font-bold">2026 MONGKOL PRODUCT MENU</span>
+          <h3 class="font-headline font-black text-3xl sm:text-4xl uppercase text-black mt-1">Official Gear Catalog</h3>
         </div>
 
         <div class="flex flex-wrap gap-2 text-xs font-headline font-bold uppercase">
-          <button onclick="filterShopCategory('all')" class="shop-filter-btn px-4 py-2 bg-white text-black transition-all">All Gear</button>
-          <button onclick="filterShopCategory('gloves')" class="shop-filter-btn px-4 py-2 bg-neutral-800 text-neutral-400 hover:text-white border border-neutral-700 transition-all">Gloves</button>
-          <button onclick="filterShopCategory('mma')" class="shop-filter-btn px-4 py-2 bg-neutral-800 text-neutral-400 hover:text-white border border-neutral-700 transition-all">MMA Gloves</button>
-          <button onclick="filterShopCategory('protection')" class="shop-filter-btn px-4 py-2 bg-neutral-800 text-neutral-400 hover:text-white border border-neutral-700 transition-all">Shin & Head</button>
-          <button onclick="filterShopCategory('pads')" class="shop-filter-btn px-4 py-2 bg-neutral-800 text-neutral-400 hover:text-white border border-neutral-700 transition-all">Pads & Bags</button>
-          <button onclick="filterShopCategory('shorts')" class="shop-filter-btn px-4 py-2 bg-neutral-800 text-neutral-400 hover:text-white border border-neutral-700 transition-all">Muay Thai Shorts</button>
+          <button onclick="filterShopCategory('all')" class="shop-filter-btn px-4 py-2 bg-black text-white shadow-sm transition-all font-bold">All Gear</button>
+          <button onclick="filterShopCategory('gloves')" class="shop-filter-btn px-4 py-2 bg-neutral-100 text-neutral-700 hover:text-black hover:bg-neutral-200 border border-neutral-300 transition-all font-bold">Gloves</button>
+          <button onclick="filterShopCategory('mma')" class="shop-filter-btn px-4 py-2 bg-neutral-100 text-neutral-700 hover:text-black hover:bg-neutral-200 border border-neutral-300 transition-all font-bold">MMA Gloves</button>
+          <button onclick="filterShopCategory('protection')" class="shop-filter-btn px-4 py-2 bg-neutral-100 text-neutral-700 hover:text-black hover:bg-neutral-200 border border-neutral-300 transition-all font-bold">Shin & Head</button>
+          <button onclick="filterShopCategory('pads')" class="shop-filter-btn px-4 py-2 bg-neutral-100 text-neutral-700 hover:text-black hover:bg-neutral-200 border border-neutral-300 transition-all font-bold">Pads & Bags</button>
+          <button onclick="filterShopCategory('shorts')" class="shop-filter-btn px-4 py-2 bg-neutral-100 text-neutral-700 hover:text-black hover:bg-neutral-200 border border-neutral-300 transition-all font-bold">Muay Thai Shorts</button>
         </div>
       </div>
 
@@ -577,9 +577,9 @@
       </div>
 
       <!-- Social Media & Wholesale Banner -->
-      <div class="bg-neutral-800/80 border border-neutral-700 p-8 rounded-xl flex flex-col md:flex-row items-center justify-between gap-6 text-xs">
+      <div class="bg-neutral-50 border border-neutral-200 p-8 rounded-xl flex flex-col md:flex-row items-center justify-between gap-6 text-xs">
         <div class="space-y-1">
-          <h4 class="font-headline font-bold text-base uppercase text-white">Looking for Custom Colors or Bulk Gym Packages?</h4>
+          <h4 class="font-headline font-bold text-base uppercase text-black">Looking for Custom Colors or Bulk Gym Packages?</h4>
           <p class="text-neutral-400 font-sans">We supply fighters, fitness clubs, and martial arts academies across Malaysia with customized Mongkol gear orders.</p>
         </div>
         <a href="https://wa.me/60143379316?text=Hi%20The%20Backyard!%20I%20would%20like%20to%20inquire%20about%20Mongkol%20Thailand%20wholesale%20distribution%20in%20Malaysia." target="_blank" class="bg-[#25D366] hover:bg-[#1EBE5D] text-white px-6 py-3 font-headline font-black uppercase tracking-wider flex items-center gap-2 rounded shrink-0 transition-colors shadow-md">
@@ -926,13 +926,13 @@
     function switchDay(day) {
       currentDay = day;
       document.querySelectorAll('.day-tab').forEach(tab => {
-        tab.classList.remove('bg-black', 'text-white', 'shadow-sm');
-        tab.classList.add('bg-gym-surface', 'text-neutral-600');
+        tab.classList.remove('bg-black', 'text-white', 'shadow-md');
+        tab.classList.add('bg-neutral-100', 'text-neutral-700', 'border', 'border-neutral-300');
       });
       const activeTab = document.getElementById(`tab-${day}`);
       if (activeTab) {
-        activeTab.classList.add('bg-black', 'text-white', 'shadow-sm');
-        activeTab.classList.remove('bg-gym-surface', 'text-neutral-600');
+        activeTab.classList.remove('bg-neutral-100', 'text-neutral-700', 'border', 'border-neutral-300');
+        activeTab.classList.add('bg-black', 'text-white', 'shadow-md');
       }
       renderSchedule();
     }
@@ -940,11 +940,11 @@
     function filterClasses(type) {
       currentFilter = type;
       document.querySelectorAll('.class-filter-btn').forEach(btn => {
-        btn.classList.remove('bg-black', 'text-white');
-        btn.classList.add('bg-gym-surface', 'text-neutral-600');
+        btn.classList.remove('bg-black', 'text-white', 'shadow-sm');
+        btn.classList.add('bg-neutral-100', 'text-neutral-700', 'border', 'border-neutral-300');
       });
-      event.currentTarget.classList.add('bg-black', 'text-white');
-      event.currentTarget.classList.remove('bg-gym-surface', 'text-neutral-600');
+      event.currentTarget.classList.remove('bg-neutral-100', 'text-neutral-700', 'border', 'border-neutral-300');
+      event.currentTarget.classList.add('bg-black', 'text-white', 'shadow-sm');
       renderSchedule();
     }
 
@@ -1362,43 +1362,43 @@
 
       container.innerHTML = filtered.map(item => {
         return `
-          <div class="bg-black/70 border border-neutral-800 rounded-lg overflow-hidden flex flex-col justify-between group hover:border-white transition-all shadow-xl">
+          <div class="bg-white border border-neutral-200 rounded-xl overflow-hidden flex flex-col justify-between group hover:border-black hover:shadow-xl transition-all shadow-sm">
             <div>
               <!-- Product Image Showcase -->
-              <div class="relative bg-white/5 overflow-hidden p-6 aspect-[16/10] flex items-center justify-center">
-                <img src="${item.img}" alt="${item.name}" class="max-h-full max-w-full object-contain filter contrast-110 group-hover:scale-105 transition-transform duration-500" />
+              <div class="relative bg-neutral-50 border-b border-neutral-100 overflow-hidden p-6 aspect-[16/10] flex items-center justify-center">
+                <img src="${item.img}" alt="${item.name}" class="max-h-full max-w-full object-contain filter contrast-105 group-hover:scale-105 transition-transform duration-500" />
                 <div class="absolute top-3 left-3 flex gap-1.5">
-                  <span class="bg-white text-black font-headline text-[9px] font-black uppercase px-2 py-0.5 rounded tracking-wider">${item.badge}</span>
-                  <span class="bg-black/70 text-neutral-300 font-mono text-[9px] font-bold uppercase px-2 py-0.5 rounded">${item.code}</span>
+                  <span class="bg-black text-white font-headline text-[9px] font-black uppercase px-2 py-0.5 rounded tracking-wider shadow-sm">${item.badge}</span>
+                  <span class="bg-neutral-200 text-neutral-800 font-mono text-[9px] font-bold uppercase px-2 py-0.5 rounded">${item.code}</span>
                 </div>
               </div>
 
               <!-- Product Details -->
               <div class="p-6 space-y-3">
                 <div class="flex items-center justify-between">
-                  <span class="text-[10px] font-mono uppercase tracking-widest text-emerald-400 font-bold">${item.tag}</span>
-                  <span class="text-xs font-mono text-neutral-400">${item.categoryName}</span>
+                  <span class="text-[10px] font-mono uppercase tracking-widest text-emerald-600 font-bold">${item.tag}</span>
+                  <span class="text-xs font-mono text-neutral-500">${item.categoryName}</span>
                 </div>
 
-                <h4 class="font-headline font-black text-lg uppercase text-white leading-snug group-hover:underline">${item.name}</h4>
-                <p class="text-xs text-neutral-400 font-sans line-clamp-2 leading-relaxed">${item.desc}</p>
+                <h4 class="font-headline font-black text-lg uppercase text-black leading-snug group-hover:underline">${item.name}</h4>
+                <p class="text-xs text-neutral-600 font-sans line-clamp-2 leading-relaxed">${item.desc}</p>
 
                 <!-- Color & Size Preview Pills -->
-                <div class="pt-2 border-t border-neutral-800/80 space-y-1.5 text-[11px] font-mono">
-                  <div class="text-neutral-400"><span class="text-neutral-500">Colors:</span> ${item.colors.slice(0, 4).join(', ')}${item.colors.length > 4 ? ' + more' : ''}</div>
-                  <div class="text-neutral-400"><span class="text-neutral-500">Sizes:</span> ${item.sizes.join(' &bull; ')}</div>
+                <div class="pt-2 border-t border-neutral-200 space-y-1.5 text-[11px] font-mono">
+                  <div class="text-neutral-600"><span class="text-neutral-400">Colors:</span> ${item.colors.slice(0, 4).join(', ')}${item.colors.length > 4 ? ' + more' : ''}</div>
+                  <div class="text-neutral-600"><span class="text-neutral-400">Sizes:</span> ${item.sizes.join(' &bull; ')}</div>
                 </div>
               </div>
             </div>
 
             <!-- Price & Action Footer -->
-            <div class="p-6 pt-0 border-t border-neutral-800 mt-4 flex items-center justify-between font-headline">
+            <div class="p-6 pt-0 border-t border-neutral-200 mt-4 flex items-center justify-between font-headline">
               <div>
-                <span class="text-[10px] font-mono uppercase text-neutral-500 block">Distributor Retail</span>
-                <span class="text-2xl font-black text-white font-mono">RM ${item.priceMYR}</span>
+                <span class="text-[10px] font-mono uppercase text-neutral-400 block">Distributor Retail</span>
+                <span class="text-2xl font-black text-black font-mono">RM ${item.priceMYR}</span>
               </div>
 
-              <button onclick="openShopModal('${item.id}')" class="bg-white hover:bg-neutral-200 text-black text-xs font-black uppercase tracking-wider px-5 py-3 rounded transition-colors shadow-md flex items-center gap-1.5">
+              <button onclick="openShopModal('${item.id}')" class="bg-black hover:bg-neutral-800 text-white text-xs font-black uppercase tracking-wider px-5 py-3 rounded transition-colors shadow-sm flex items-center gap-1.5">
                 <span>Inquire / Buy</span>
                 <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
               </button>
@@ -1413,11 +1413,11 @@
     function filterShopCategory(cat) {
       currentShopCategory = cat;
       document.querySelectorAll('.shop-filter-btn').forEach(btn => {
-        btn.classList.remove('bg-white', 'text-black');
-        btn.classList.add('bg-neutral-800', 'text-neutral-400');
+        btn.classList.remove('bg-black', 'text-white', 'shadow-sm');
+        btn.classList.add('bg-neutral-100', 'text-neutral-700', 'border', 'border-neutral-300');
       });
-      event.currentTarget.classList.add('bg-white', 'text-black');
-      event.currentTarget.classList.remove('bg-neutral-800', 'text-neutral-400');
+      event.currentTarget.classList.remove('bg-neutral-100', 'text-neutral-700', 'border', 'border-neutral-300');
+      event.currentTarget.classList.add('bg-black', 'text-white', 'shadow-sm');
       renderMongkolShop();
     }
 
