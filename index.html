@@ -89,6 +89,10 @@
         <a href="#classes" class="hover:text-black transition-colors">Classes</a>
         <a href="#timetable" class="hover:text-black transition-colors">Timetable</a>
         <a href="#pricing" class="hover:text-black transition-colors">Pricing</a>
+        <a href="#shop" class="hover:text-black transition-colors font-extrabold flex items-center gap-1.5 text-black">
+          <span>Shop</span>
+          <span class="bg-black text-white text-[9px] px-1.5 py-0.5 rounded uppercase font-mono">Mongkol</span>
+        </a>
       </nav>
 
       <!-- Cart Icon with Red Badge -->
@@ -510,6 +514,182 @@
   </section>
 
 
+  
+  <!-- ================= MONGKOL THAILAND OFFICIAL PARTNER & STORE SECTION ================= -->
+  <section id="shop" class="bg-neutral-900 text-white py-28 px-6 relative overflow-hidden">
+    
+    <!-- Background Watermark Text "MONGKOL" -->
+    <div class="absolute top-10 left-10 font-headline font-black text-7xl sm:text-9xl lg:text-[13rem] watermark-text-dark uppercase pointer-events-none select-none opacity-20">
+      MONGKOL
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto space-y-12">
+      
+      <!-- Partner Announcement Banner -->
+      <div class="border border-neutral-800 bg-black/60 backdrop-blur-md p-8 sm:p-10 rounded-xl flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl">
+        <div class="space-y-3 max-w-2xl">
+          <div class="inline-flex items-center gap-2 bg-white text-black px-3 py-1 text-[11px] font-headline font-extrabold uppercase tracking-widest rounded">
+            <span>OFFICIAL MALAYSIA DISTRIBUTOR & STOCKIST</span>
+          </div>
+          <h2 class="font-headline font-black text-3xl sm:text-5xl uppercase tracking-tight text-white leading-tight">
+            MONGKOL THAILAND &times; THE BACKYARD
+          </h2>
+          <p class="text-xs sm:text-sm text-neutral-400 font-sans leading-relaxed">
+            The Backyard is proud to be the official partner, distributor, and premier stockist for <strong>Mongkol Thailand</strong> combat equipment in Malaysia. Handcrafted in Bangkok using 100% genuine premium cowhide leather and competition-proven padding. Direct wholesale stockist pricing with guaranteed authenticity.
+          </p>
+          <div class="flex flex-wrap items-center gap-6 pt-2 font-mono text-[11px] text-neutral-400">
+            <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i> 100% Authentic Bangkok Leather</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="truck" class="w-4 h-4 text-emerald-400"></i> Ready Stock & Direct Delivery</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="award" class="w-4 h-4 text-emerald-400"></i> Wholesale & Gym Inquiries Welcome</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center gap-4 shrink-0">
+          <a href="https://wa.me/60143379316?text=Hi%20The%20Backyard!%20I%20am%20interested%20in%20becoming%20a%20sub-dealer%20or%20buying%20bulk%20Mongkol%20gear." target="_blank" class="bg-transparent hover:bg-white/10 text-white border border-neutral-700 px-6 py-3.5 text-xs font-headline font-bold uppercase tracking-wider transition-colors text-center">
+            Bulk / Gym Wholesale
+          </a>
+          <button onclick="document.getElementById('mongkolCatalogGrid').scrollIntoView({behavior: 'smooth'})" class="bg-white hover:bg-neutral-200 text-black px-7 py-3.5 text-xs font-headline font-black uppercase tracking-wider transition-colors shadow-lg text-center">
+            Browse Gear Below &darr;
+          </button>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-neutral-800 pb-6 gap-6">
+        <div>
+          <span class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 font-bold">2026 MONGKOL PRODUCT MENU</span>
+          <h3 class="font-headline font-black text-3xl sm:text-4xl uppercase text-white mt-1">Official Gear Catalog</h3>
+        </div>
+
+        <div class="flex flex-wrap gap-2 text-xs font-headline font-bold uppercase">
+          <button onclick="filterShopCategory('all')" class="shop-filter-btn px-4 py-2 bg-white text-black transition-all">All Gear</button>
+          <button onclick="filterShopCategory('gloves')" class="shop-filter-btn px-4 py-2 bg-neutral-800 text-neutral-400 hover:text-white border border-neutral-700 transition-all">Gloves</button>
+          <button onclick="filterShopCategory('mma')" class="shop-filter-btn px-4 py-2 bg-neutral-800 text-neutral-400 hover:text-white border border-neutral-700 transition-all">MMA Gloves</button>
+          <button onclick="filterShopCategory('protection')" class="shop-filter-btn px-4 py-2 bg-neutral-800 text-neutral-400 hover:text-white border border-neutral-700 transition-all">Shin & Head</button>
+          <button onclick="filterShopCategory('pads')" class="shop-filter-btn px-4 py-2 bg-neutral-800 text-neutral-400 hover:text-white border border-neutral-700 transition-all">Pads & Bags</button>
+          <button onclick="filterShopCategory('shorts')" class="shop-filter-btn px-4 py-2 bg-neutral-800 text-neutral-400 hover:text-white border border-neutral-700 transition-all">Muay Thai Shorts</button>
+        </div>
+      </div>
+
+      <!-- Product Catalog Cards Grid -->
+      <div id="mongkolCatalogGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Injected via JavaScript for rich interactive sizing & WhatsApp order generation -->
+      </div>
+
+      <!-- Social Media & Wholesale Banner -->
+      <div class="bg-neutral-800/80 border border-neutral-700 p-8 rounded-xl flex flex-col md:flex-row items-center justify-between gap-6 text-xs">
+        <div class="space-y-1">
+          <h4 class="font-headline font-bold text-base uppercase text-white">Looking for Custom Colors or Bulk Gym Packages?</h4>
+          <p class="text-neutral-400 font-sans">We supply fighters, fitness clubs, and martial arts academies across Malaysia with customized Mongkol gear orders.</p>
+        </div>
+        <a href="https://wa.me/60143379316?text=Hi%20The%20Backyard!%20I%20would%20like%20to%20inquire%20about%20Mongkol%20Thailand%20wholesale%20distribution%20in%20Malaysia." target="_blank" class="bg-[#25D366] hover:bg-[#1EBE5D] text-white px-6 py-3 font-headline font-black uppercase tracking-wider flex items-center gap-2 rounded shrink-0 transition-colors shadow-md">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>WhatsApp Stockist Desk</span>
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- MONGKOL PRODUCT ORDER MODAL -->
+  <div id="shopOrderModal" class="fixed inset-0 z-50 overflow-hidden hidden" role="dialog" aria-modal="true">
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity" onclick="closeShopModal()"></div>
+    <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+      <div class="pointer-events-auto w-screen max-w-md bg-white border-l border-neutral-200 flex flex-col justify-between shadow-2xl">
+        
+        <div class="p-6 border-b border-neutral-200 flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="bg-black text-white text-[10px] font-mono px-2 py-0.5 rounded font-bold">MONGKOL THAILAND</span>
+            <h3 class="font-headline font-black text-base uppercase tracking-wider text-black">Order & Inquiry</h3>
+          </div>
+          <button onclick="closeShopModal()" class="text-neutral-600 hover:text-black p-1">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <div class="p-6 space-y-5 overflow-y-auto flex-1 text-xs">
+          <!-- Product Preview Card -->
+          <div class="bg-neutral-50 border border-neutral-200 p-4 space-y-2 font-headline">
+            <div class="flex gap-3 items-center">
+              <img id="modalProductImg" src="" class="w-16 h-16 object-contain bg-white border border-neutral-200 p-1 rounded" />
+              <div class="flex-1">
+                <span id="modalProductCode" class="text-[10px] font-mono text-neutral-500 font-bold block">BGM01</span>
+                <h4 id="modalProductTitle" class="font-bold text-sm text-black leading-tight">Mongkol Boxing Gloves</h4>
+                <div id="modalProductPrice" class="font-mono text-sm font-black text-black mt-1">RM 390</div>
+              </div>
+            </div>
+            <p id="modalProductDesc" class="text-[11px] text-neutral-600 font-sans pt-1 border-t border-neutral-200"></p>
+          </div>
+
+          <!-- Order Form -->
+          <form id="shopOrderForm" onsubmit="handleShopOrderSubmit(event)" class="space-y-4 font-headline">
+            <div>
+              <label class="block font-bold uppercase tracking-wider text-black mb-1">Your Full Name *</label>
+              <input type="text" id="buyerName" required placeholder="e.g. Bryan Tan" class="w-full bg-neutral-50 border border-neutral-300 px-4 py-3 text-xs text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-black font-sans" />
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block font-bold uppercase tracking-wider text-black mb-1">WhatsApp Phone *</label>
+                <input type="tel" id="buyerPhone" required placeholder="e.g. 014-337 9316" class="w-full bg-neutral-50 border border-neutral-300 px-4 py-3 text-xs text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-black font-sans" />
+              </div>
+              <div>
+                <label class="block font-bold uppercase tracking-wider text-black mb-1">Delivery / Pickup</label>
+                <select id="buyerDelivery" class="w-full bg-neutral-50 border border-neutral-300 px-4 py-3 text-xs text-neutral-900 focus:outline-none focus:border-black font-sans">
+                  <option value="Self-Pickup at The Backyard (Bangsar)">Self-Pickup at Gym</option>
+                  <option value="Postage Delivery (West Malaysia)">Postage (West Malaysia)</option>
+                  <option value="Postage Delivery (East Malaysia)">Postage (East Malaysia)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block font-bold uppercase tracking-wider text-black mb-1">Size / Weight</label>
+                <select id="buyerSize" class="w-full bg-neutral-50 border border-neutral-300 px-4 py-3 text-xs text-neutral-900 focus:outline-none focus:border-black font-sans">
+                  <option value="Standard / Free Size">Standard / Free Size</option>
+                  <option value="8 Oz">8 Oz</option>
+                  <option value="10 Oz">10 Oz</option>
+                  <option value="12 Oz">12 Oz</option>
+                  <option value="14 Oz">14 Oz</option>
+                  <option value="16 Oz">16 Oz</option>
+                  <option value="Size S">Size S</option>
+                  <option value="Size M">Size M</option>
+                  <option value="Size L">Size L</option>
+                  <option value="Size XL">Size XL</option>
+                </select>
+              </div>
+              <div>
+                <label class="block font-bold uppercase tracking-wider text-black mb-1">Color Preference</label>
+                <input type="text" id="buyerColor" placeholder="e.g. Black / White / Red" class="w-full bg-neutral-50 border border-neutral-300 px-4 py-3 text-xs text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-black font-sans" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block font-bold uppercase tracking-wider text-black mb-1">Quantity</label>
+              <input type="number" id="buyerQty" value="1" min="1" max="50" class="w-full bg-neutral-50 border border-neutral-300 px-4 py-3 text-xs text-neutral-900 focus:outline-none focus:border-black font-sans" />
+            </div>
+
+            <div class="bg-neutral-100 border border-neutral-200 p-3 text-[11px] text-neutral-600 font-sans leading-relaxed">
+              📦 Clicking below connects you directly with our Stockist Desk on WhatsApp with the product specifications pre-filled to arrange instant stock confirmation and payment!
+            </div>
+
+            <button type="submit" class="w-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-black text-xs uppercase tracking-wider py-4 transition-colors shadow-md flex items-center justify-center gap-2 mt-4">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Confirm Order via WhatsApp</span>
+            </button>
+          </form>
+        </div>
+
+        <div class="p-4 border-t border-neutral-200 text-center text-xs text-neutral-600 font-mono">
+          Official Mongkol Thailand Malaysia Partner &bull; <a href="https://wa.me/60143379316" class="text-black underline font-bold">014-337 9316</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <!-- ================= 8. GYMFIT X FOOTER ================= -->
   <footer class="bg-white border-t border-neutral-200 py-14 px-6 text-xs text-neutral-600">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 font-headline uppercase tracking-wider">
@@ -522,7 +702,8 @@
         <a href="https://wa.me/60143379316" target="_blank" class="hover:text-white">WhatsApp</a>
         <a href="https://instagram.com" target="_blank" class="hover:text-white">Instagram</a>
         <a href="#about" class="hover:text-white">About</a>
-        <a href="#timetable" class="hover:text-white">Schedule</a>
+        <a href="#timetable" class="hover:text-black">Schedule</a>
+        <a href="#shop" class="hover:text-black font-bold">Mongkol Shop</a>
       </div>
 
       <div>
@@ -873,7 +1054,437 @@
       document.getElementById('cartTotal').innerText = `RM ${subtotal.toFixed(2)}`;
     }
 
+    
+    // MONGKOL PRODUCTS DATA & SHOPPING LOGIC
+    const mongkolCatalog = [
+      {
+        id: 'bgm01',
+        code: 'BGM01',
+        name: 'Mongkol Premium Leather Boxing Gloves',
+        category: 'gloves',
+        categoryName: 'Boxing Gloves',
+        priceMYR: 390,
+        img: 'images/mongkol/bgm01_all.png',
+        badge: 'BESTSELLER',
+        tag: 'GENUINE COWHIDE LEATHER',
+        desc: 'Handcrafted Bangkok fight gloves made from 100% genuine premium leather. 3-layer shock-absorbing core foam for maximum metacarpal and wrist protection.',
+        sizes: ['8 Oz', '10 Oz', '12 Oz', '14 Oz', '16 Oz'],
+        colors: ['White', 'Black', 'Red', 'Blue', 'Yellow', 'Pink', 'Vanilla', 'Lavender', 'Light Blue', 'Orange']
+      },
+      {
+        id: 'bgm01-g',
+        code: 'BGM01-G',
+        name: 'Mongkol Graphic Edition Boxing Gloves',
+        category: 'gloves',
+        categoryName: 'Boxing Gloves',
+        priceMYR: 410,
+        img: 'images/mongkol/bgm01_graphic.png',
+        badge: 'LIMITED EDITION',
+        tag: 'PHOENIX & LIANA ART',
+        desc: 'Special graphic edition featuring vibrant Thai floral & mythic Phoenix illustrations. Ergonomic thumb lock with reinforced hook-and-loop wrap.',
+        sizes: ['8 Oz', '10 Oz', '12 Oz', '14 Oz', '16 Oz'],
+        colors: ['Phoenix (Flame)', 'Liana (Floral)']
+      },
+      {
+        id: 'bgm02',
+        code: 'BGM02',
+        name: 'Mongkol Two-Tone Air-Flow Gloves',
+        category: 'gloves',
+        categoryName: 'Boxing Gloves',
+        priceMYR: 390,
+        img: 'images/mongkol/bgm02_twotone.png',
+        badge: 'HIGH VENTILATION',
+        tag: 'DUAL COLOR PALM',
+        desc: 'Modern two-tone styling with ventilated mesh palm and moisture-wicking satin liner. Keeps hands cool during high-output pad rounds.',
+        sizes: ['8 Oz', '10 Oz', '12 Oz', '14 Oz', '16 Oz'],
+        colors: ['White/Black', 'Red/Black', 'Blue/Black', 'Yellow/Black']
+      },
+      {
+        id: 'bgm03',
+        code: 'BGM03',
+        name: 'Mongkol Signature Eagle Boxing Gloves',
+        category: 'gloves',
+        categoryName: 'Boxing Gloves',
+        priceMYR: 480,
+        img: 'images/mongkol/bgm03_eagle.png',
+        badge: 'PRO MASTERPIECE',
+        tag: 'EMBROIDERED EAGLE',
+        desc: 'Top-tier luxury combat gloves featuring gold embroidered Eagle artwork across pristine white leather. Heavyweight sparring grade.',
+        sizes: ['8 Oz', '10 Oz', '12 Oz', '14 Oz', '16 Oz'],
+        colors: ['Eagle White/Gold']
+      },
+      {
+        id: 'bgml01',
+        code: 'BGML01',
+        name: 'Mongkol Professional Lace-Up Fight Gloves',
+        category: 'gloves',
+        categoryName: 'Boxing Gloves',
+        priceMYR: 420,
+        img: 'images/mongkol/bgml01_laceup.png',
+        badge: 'STADIUM PRO',
+        tag: 'AUTHENTIC LACE-UP',
+        desc: 'Pro competition lace-up gloves designed for elite fist closure and zero wrist slippage. High-density latex foam distribution.',
+        sizes: ['8 Oz', '10 Oz', '12 Oz', '14 Oz', '16 Oz'],
+        colors: ['Black/White', 'Red/White', 'Blue/White', 'Yellow/White']
+      },
+      {
+        id: 'mgm01',
+        code: 'MGM01',
+        name: 'Mongkol Sparring MMA Gloves (Closed Thumb)',
+        category: 'mma',
+        categoryName: 'MMA Gloves',
+        priceMYR: 290,
+        img: 'images/mongkol/mgm01_mma_closed.png',
+        badge: 'POPULAR',
+        tag: 'THUMB PROTECTION',
+        desc: 'MMA hybrid glove with fully padded closed thumb and open palm. Seamless transition between stand-up striking and grappling.',
+        sizes: ['S', 'M', 'L', 'XL'],
+        colors: ['Black', 'White/Black', 'Grey/Black', 'Red/Black', 'Blue/Black', 'Yellow/Black']
+      },
+      {
+        id: 'mgm02',
+        code: 'MGM02',
+        name: 'Mongkol Pro Open-Thumb MMA Gloves',
+        category: 'mma',
+        categoryName: 'MMA Gloves',
+        priceMYR: 290,
+        img: 'images/mongkol/mgm02_mma_open.png',
+        badge: 'GRAPPLING PRO',
+        tag: 'OPEN THUMB & PALM',
+        desc: 'Maximum grip freedom for wrist control and submissions. Reinforced knuckle bar and multi-point leather wrist strap.',
+        sizes: ['S', 'M', 'L', 'XL'],
+        colors: ['Black', 'White/Black', 'Grey/Black', 'Red/Black', 'Blue/Black', 'Yellow/Black']
+      },
+      {
+        id: 'mgm03',
+        code: 'MGM03',
+        name: 'Mongkol Heavy Padded MMA Sparring Gloves',
+        category: 'mma',
+        categoryName: 'MMA Gloves',
+        priceMYR: 290,
+        img: 'images/mongkol/mgm03_mma_sparring.png',
+        badge: 'HEAVY SPARRING',
+        tag: 'MAXIMUM FOAM CUSHION',
+        desc: 'Built specifically for hard MMA sparring with oversized rounded knuckle padding. Protects partner while drilling fight-speed strikes.',
+        sizes: ['S', 'M', 'L', 'XL'],
+        colors: ['Black', 'Grey/White', 'Yellow/White', 'Blue/White', 'Red/White']
+      },
+      {
+        id: 'sgm01',
+        code: 'SGM01',
+        name: 'Mongkol Premium Leather Shin Guards',
+        category: 'protection',
+        categoryName: 'Protection',
+        priceMYR: 410,
+        img: 'images/mongkol/sgm01_shin_guards.png',
+        badge: 'ESSENTIAL GEAR',
+        tag: 'HIGH IMPACT DEFENSE',
+        desc: 'High-density contoured shin bone and instep shield. Double wide velcro straps with rear calf protection for aggressive checks.',
+        sizes: ['S', 'M', 'L', 'XL'],
+        colors: ['Black', 'White', 'Red', 'Blue', 'Yellow', 'Pink']
+      },
+      {
+        id: 'sgm01-g',
+        code: 'SGM01-G',
+        name: 'Mongkol Graphic Series Shin Guards',
+        category: 'protection',
+        categoryName: 'Protection',
+        priceMYR: 430,
+        img: 'images/mongkol/sgm01_graphic_guards.png',
+        badge: 'GRAPHIC EDITION',
+        tag: 'ENHANCED PADDING',
+        desc: 'Distinctive tribal graphic embellishment with rigid high-density bone protection. Zero-twist secure fit during sparring.',
+        sizes: ['S', 'M', 'L', 'XL'],
+        colors: ['Black Graphic', 'White Graphic', 'Red Graphic']
+      },
+      {
+        id: 'hgm01',
+        code: 'HGM01',
+        name: 'Mongkol Full-Protection Head Guard',
+        category: 'protection',
+        categoryName: 'Protection',
+        priceMYR: 490,
+        img: 'images/mongkol/hgm01_head_guard.png',
+        badge: 'MAX PROTECTION',
+        tag: 'LACE-UP TOP CROWN',
+        desc: 'Competition-approved head protection with anatomical cheek protectors, ear channels, and cushioned chin guard.',
+        sizes: ['S', 'M', 'L', 'XL'],
+        colors: ['Black/White', 'Black/Red', 'Black/Blue', 'Black/Yellow']
+      },
+      {
+        id: 'bpm01',
+        code: 'BPM01',
+        name: 'Mongkol Ergonomic Trainer Belly Protector',
+        category: 'pads',
+        categoryName: 'Trainer Pads',
+        priceMYR: 520,
+        img: 'images/mongkol/bpm01_belly_protector.png',
+        badge: 'TRAINER ESSENTIAL',
+        tag: 'GOLD EMBROIDERY',
+        desc: 'Lightweight ergonomic body shield engineered for coaches absorbing heavy teeps, roundhouse kicks, and knees without fatigue.',
+        sizes: ['Free Size (Adjustable)'],
+        colors: ['White/Gold', 'Black/Gold', 'Blue/Gold', 'Red/Gold']
+      },
+      {
+        id: 'kgm01',
+        code: 'KGM01',
+        name: 'Mongkol Curved Thai Kick Pads (Pair)',
+        category: 'pads',
+        categoryName: 'Trainer Pads',
+        priceMYR: 590,
+        img: 'images/mongkol/kgm01_kick_pads.png',
+        badge: 'TOP SELLER',
+        tag: 'CURVED TARGET SURFACE',
+        desc: 'Anatomically curved to catch kicks naturally. Features double riveted forearm straps and ergonomic padded grip bar.',
+        sizes: ['Standard (Speed)', 'Pro (Heavy Impact)'],
+        colors: ['Black/White', 'Red/White', 'Blue/Yellow']
+      },
+      {
+        id: 'pmm01',
+        code: 'PMM01',
+        name: 'Mongkol Pro Curved Focus Mitts (Pair)',
+        category: 'pads',
+        categoryName: 'Trainer Pads',
+        priceMYR: 550,
+        img: 'images/mongkol/pmm01_focus_mitts.png',
+        badge: 'PRECISION PADS',
+        tag: 'PALM STRIKE BALL',
+        desc: 'Curved focus mitts with internal palm ball grip that disperses wrist tension when catching high-velocity punch combinations.',
+        sizes: ['Standard'],
+        colors: ['Black/White', 'Red/Black', 'Blue/Black']
+      },
+      {
+        id: 'pmm02',
+        code: 'PMM02',
+        name: 'Mongkol Hybrid Punch & Kick Mitts (Pair)',
+        category: 'pads',
+        categoryName: 'Trainer Pads',
+        priceMYR: 580,
+        img: 'images/mongkol/pmm02_hybrid_mitts.png',
+        badge: 'HYBRID VERSATILITY',
+        tag: 'PUNCH & KICK DRILLS',
+        desc: 'Extra-long strike surface capable of absorbing both speed boxing hooks and heavy roundhouse kicks during fast pad flow drills.',
+        sizes: ['Standard'],
+        colors: ['White/Black', 'White/Red', 'Yellow/Black', 'Orange/Black']
+      },
+      {
+        id: 'pbm01',
+        code: 'PBM01',
+        name: 'Mongkol Heavy Duty Punching Bag (Unfilled)',
+        category: 'pads',
+        categoryName: 'Heavy Bags',
+        priceMYR: 590,
+        img: 'images/mongkol/pbm01_heavy_bag.png',
+        badge: 'GYM BUILDER',
+        tag: 'SYNTHETIC COMBAT LEATHER',
+        desc: 'Heavy-duty industrial grade bag with reinforced nylon suspension straps. Unfilled for easy shipping (Filled option RM 790 upon request).',
+        sizes: ['Unfilled (RM 590)', 'Filled (RM 790)'],
+        colors: ['Black', 'Black/Grey', 'Black/Blue', 'Black/Yellow']
+      },
+      {
+        id: 'bsm01',
+        code: 'BSM01',
+        name: 'Mongkol Traditional Satin Muay Thai Shorts',
+        category: 'shorts',
+        categoryName: 'Muay Thai Shorts',
+        priceMYR: 170,
+        img: 'images/mongkol/bsm01_satin_shorts.png',
+        badge: 'BANGKOK CLASSIC',
+        tag: 'HEAVYWEIGHT SATIN',
+        desc: 'Authentic high-sheen satin with traditional flared leg cut and authentic golden Thai script patches across the front.',
+        sizes: ['XS', 'S', 'M', 'L', 'XL'],
+        colors: ['Black', 'White', 'Red', 'Blue', 'Yellow', 'Pink']
+      },
+      {
+        id: 'bsm02',
+        code: 'BSM02',
+        name: 'Mongkol Retro Phoenix Micro-Satin Shorts',
+        category: 'shorts',
+        categoryName: 'Muay Thai Shorts',
+        priceMYR: 170,
+        img: 'images/mongkol/bsm02_phoenix_shorts.png',
+        badge: 'RETRO CUT',
+        tag: 'EMBROIDERED PHOENIX',
+        desc: 'Ultra-lightweight micro-satin with curved side vents for ultimate freedom of movement. Embroidered fiery Phoenix patch.',
+        sizes: ['XS', 'S', 'M', 'L', 'XL'],
+        colors: ['Midnight Navy / Phoenix']
+      },
+      {
+        id: 'bsm03',
+        code: 'BSM03',
+        name: 'Mongkol Retro Eagle Micro-Satin Shorts',
+        category: 'shorts',
+        categoryName: 'Muay Thai Shorts',
+        priceMYR: 170,
+        img: 'images/mongkol/bsm03_eagle_shorts.png',
+        badge: 'RETRO CUT',
+        tag: 'EMBROIDERED EAGLE',
+        desc: 'Sleek curved retro cut featuring gold and crimson embroidered Eagle insignia. Soft elasticized waistband.',
+        sizes: ['XS', 'S', 'M', 'L', 'XL'],
+        colors: ['Midnight Navy / Eagle']
+      },
+      {
+        id: 'bsm04',
+        code: 'BSM04',
+        name: 'Mongkol Retro Liana Micro-Satin Shorts',
+        category: 'shorts',
+        categoryName: 'Muay Thai Shorts',
+        priceMYR: 170,
+        img: 'images/mongkol/bsm04_liana_shorts.png',
+        badge: 'RETRO CUT',
+        tag: 'LIANA FLORAL EMBROIDERY',
+        desc: 'Custom modern artistic floral embroidery on deep midnight micro-satin fabric. Designed for mobility and comfort.',
+        sizes: ['XS', 'S', 'M', 'L', 'XL'],
+        colors: ['Midnight Navy / Liana']
+      },
+      {
+        id: 'bsm05',
+        code: 'BSM05',
+        name: 'Mongkol Dual-Tone Satin Shorts',
+        category: 'shorts',
+        categoryName: 'Muay Thai Shorts',
+        priceMYR: 170,
+        img: 'images/mongkol/bsm05_satin_shorts.png',
+        badge: 'POPULAR STYLE',
+        tag: 'TWO-TONE SATIN',
+        desc: 'Two-tone contrast satin body with white paneling and traditional Mongkol emblem badge on waistband.',
+        sizes: ['XS', 'S', 'M', 'L', 'XL'],
+        colors: ['Red/White', 'Blue/White', 'Yellow/White', 'Pink/White']
+      }
+    ];
+
+    let currentShopCategory = 'all';
+
+    function renderMongkolShop() {
+      const container = document.getElementById('mongkolCatalogGrid');
+      if (!container) return;
+      const filtered = mongkolCatalog.filter(p => currentShopCategory === 'all' || p.category === currentShopCategory);
+
+      container.innerHTML = filtered.map(item => {
+        return `
+          <div class="bg-black/70 border border-neutral-800 rounded-lg overflow-hidden flex flex-col justify-between group hover:border-white transition-all shadow-xl">
+            <div>
+              <!-- Product Image Showcase -->
+              <div class="relative bg-white/5 overflow-hidden p-6 aspect-[16/10] flex items-center justify-center">
+                <img src="${item.img}" alt="${item.name}" class="max-h-full max-w-full object-contain filter contrast-110 group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute top-3 left-3 flex gap-1.5">
+                  <span class="bg-white text-black font-headline text-[9px] font-black uppercase px-2 py-0.5 rounded tracking-wider">${item.badge}</span>
+                  <span class="bg-black/70 text-neutral-300 font-mono text-[9px] font-bold uppercase px-2 py-0.5 rounded">${item.code}</span>
+                </div>
+              </div>
+
+              <!-- Product Details -->
+              <div class="p-6 space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-mono uppercase tracking-widest text-emerald-400 font-bold">${item.tag}</span>
+                  <span class="text-xs font-mono text-neutral-400">${item.categoryName}</span>
+                </div>
+
+                <h4 class="font-headline font-black text-lg uppercase text-white leading-snug group-hover:underline">${item.name}</h4>
+                <p class="text-xs text-neutral-400 font-sans line-clamp-2 leading-relaxed">${item.desc}</p>
+
+                <!-- Color & Size Preview Pills -->
+                <div class="pt-2 border-t border-neutral-800/80 space-y-1.5 text-[11px] font-mono">
+                  <div class="text-neutral-400"><span class="text-neutral-500">Colors:</span> ${item.colors.slice(0, 4).join(', ')}${item.colors.length > 4 ? ' + more' : ''}</div>
+                  <div class="text-neutral-400"><span class="text-neutral-500">Sizes:</span> ${item.sizes.join(' &bull; ')}</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Price & Action Footer -->
+            <div class="p-6 pt-0 border-t border-neutral-800 mt-4 flex items-center justify-between font-headline">
+              <div>
+                <span class="text-[10px] font-mono uppercase text-neutral-500 block">Distributor Retail</span>
+                <span class="text-2xl font-black text-white font-mono">RM ${item.priceMYR}</span>
+              </div>
+
+              <button onclick="openShopModal('${item.id}')" class="bg-white hover:bg-neutral-200 text-black text-xs font-black uppercase tracking-wider px-5 py-3 rounded transition-colors shadow-md flex items-center gap-1.5">
+                <span>Inquire / Buy</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    function filterShopCategory(cat) {
+      currentShopCategory = cat;
+      document.querySelectorAll('.shop-filter-btn').forEach(btn => {
+        btn.classList.remove('bg-white', 'text-black');
+        btn.classList.add('bg-neutral-800', 'text-neutral-400');
+      });
+      event.currentTarget.classList.add('bg-white', 'text-black');
+      event.currentTarget.classList.remove('bg-neutral-800', 'text-neutral-400');
+      renderMongkolShop();
+    }
+
+    let activeProduct = null;
+
+    function openShopModal(productId) {
+      const p = mongkolCatalog.find(item => item.id === productId);
+      if (!p) return;
+      activeProduct = p;
+
+      document.getElementById('modalProductImg').src = p.img;
+      document.getElementById('modalProductCode').innerText = p.code + ' &bull; ' + p.tag;
+      document.getElementById('modalProductTitle').innerText = p.name;
+      document.getElementById('modalProductPrice').innerText = 'RM ' + p.priceMYR;
+      document.getElementById('modalProductDesc').innerText = p.desc;
+
+      // Populate Sizes dropdown
+      const sizeSelect = document.getElementById('buyerSize');
+      sizeSelect.innerHTML = p.sizes.map(s => `<option value="${s}">${s}</option>`).join('');
+
+      // Populate Color field placeholder
+      document.getElementById('buyerColor').placeholder = 'e.g. ' + p.colors.slice(0, 3).join(', ');
+      document.getElementById('buyerColor').value = p.colors[0] || '';
+
+      document.getElementById('shopOrderModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeShopModal() {
+      document.getElementById('shopOrderModal').classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    function handleShopOrderSubmit(e) {
+      e.preventDefault();
+      if (!activeProduct) return;
+
+      const name = document.getElementById('buyerName').value.trim();
+      const phone = document.getElementById('buyerPhone').value.trim();
+      const delivery = document.getElementById('buyerDelivery').value;
+      const size = document.getElementById('buyerSize').value;
+      const color = document.getElementById('buyerColor').value.trim() || activeProduct.colors[0];
+      const qty = document.getElementById('buyerQty').value || 1;
+      const totalPrice = activeProduct.priceMYR * parseInt(qty);
+
+      const msg = `Hi The Backyard! I would like to order Mongkol Thailand gear.\n\n` +
+        `🥊 *Product Details:*\n` +
+        `• Model: ${activeProduct.name} (${activeProduct.code})\n` +
+        `• Unit Price: RM ${activeProduct.priceMYR}\n` +
+        `• Quantity: ${qty}\n` +
+        `• Total Est: RM ${totalPrice}\n` +
+        `• Selected Size: ${size}\n` +
+        `• Selected Color: ${color}\n\n` +
+        `👤 *Buyer Info:*\n` +
+        `• Name: ${name}\n` +
+        `• Phone: ${phone}\n` +
+        `• Delivery Preference: ${delivery}\n\n` +
+        `Please let me know how to proceed with payment and stock availability!`;
+
+      const encoded = encodeURIComponent(msg);
+      const url = `https://wa.me/60143379316?text=${encoded}`;
+      window.open(url, '_blank');
+      closeShopModal();
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
+      renderMongkolShop();
       renderSchedule();
       updateCartBadge();
       lucide.createIcons();
